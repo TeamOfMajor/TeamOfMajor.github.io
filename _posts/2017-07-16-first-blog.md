@@ -1,19 +1,19 @@
 ---
-title:  T.O.M 기술 블로그.
+title:  T.O.M 기술 블로그-3.
 excerpt: "기술 블로그."
 search: true
 categories: 
-  - blog
+  - test
 tags: 
-  - first
+  - issac
 toc: true
 comments: true
 
-last_modified_at: 2019-09-16T00:03:00+09:00
+last_modified_at: 2017-09-16T00:03:00+09:00
 
-## -- 블로그 글위에 이미지 추가
-#header:
-#  image: https://cdn.pixabay.com/photo/2019/06/27/06/49/plane-4301615_1280.png
+# -- 블로그 글위에 이미지 추가
+header:
+  image: /assets/images/hannah-rodrigo-mf_3yZnC6ug-unsplash.jpg 
 
 ## -- 블로그 글위에 색상 추가
 #xcerpt: "This post should display a **header with a solid background color**, if the theme #supports it."

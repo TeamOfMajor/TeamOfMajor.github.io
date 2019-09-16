@@ -1,24 +1,24 @@
 ---
-title:  T.O.M 기술 블로그.
+title:  T.O.M 기술 블로그-2.
 excerpt: "기술 블로그."
 search: true
 categories: 
   - blog
 tags: 
-  - first
+  - abc
 toc: true
 comments: true
 
-last_modified_at: 2019-09-16T00:03:00+09:00
+last_modified_at: 2016-09-16T00:03:00+09:00
 
 ## -- 블로그 글위에 이미지 추가
 #header:
 #  image: https://cdn.pixabay.com/photo/2019/06/27/06/49/plane-4301615_1280.png
 
-## -- 블로그 글위에 색상 추가
-#xcerpt: "This post should display a **header with a solid background color**, if the theme #supports it."
-#header:
-#  overlay_color: "#333"
+# -- 블로그 글위에 색상 추가
+xcerpt: "This post should display a **header with a solid background color**, if the theme #supports it."
+header:
+  overlay_color: "#333"
 
 ## -- 블로그 글위에 배경 추가 및 링크 추가
 #xcerpt: "This post should [...]"
