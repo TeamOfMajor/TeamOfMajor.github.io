@@ -3,9 +3,9 @@ title:  T.O.M 기술 블로그-2.
 excerpt: "기술 블로그."
 search: true
 categories: 
-  - blog
-tags: 
   - abc
+tags: 
+  - abc2
 toc: true
 comments: true
 
