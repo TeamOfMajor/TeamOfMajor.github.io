@@ -10,8 +10,8 @@ tags:
 toc: true
 comments: true
 
-#last_modified_at: 2015-09-16T00:03:00+09:00
-last_modified_at: {{ page.last_modified_at | date: '%Y:%B:%A:%d:%S:%R' }}
+last_modified_at: 2015-09-16T00:03:00+09:00
+#last_modified_at: {{ page.last_modified_at | date: '%Y:%B:%A:%d:%S:%R' }}
 
 
 
