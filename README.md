@@ -51,7 +51,7 @@ Jekyll을 로컬에 설치 하지 않은 경우 github의 `master branch에 push
   ```
 
   - master branch에 변경사항이 push 되면 1~2분 이내에 수정사항이 반영 되었다고 메일이 옵니다.
-  - post가 완성되면 원본 [Repository](https://github.com/teamofmajor/teamofmajor.github.io)로 PR을 생성합니다.
+  - post가 완성되면 원본 [Repository](https://github.com/teamofmajor/teamofmajor.github.io)로 PR을 생성합니다. (자신의 계정 PR 탭에서 진행)
     - PR(Pull Request)를 생성할때 from / to는 아래와 같이 설정 합니다.
         - base repository: teamofmajor/teamofmajor.github.io
             - base: master

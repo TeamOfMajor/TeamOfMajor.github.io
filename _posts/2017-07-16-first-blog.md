@@ -1,15 +1,13 @@
 ---
 title:  T.O.M 기술 블로그-3.
-excerpt: "기술 블로그."
+excerpt: "아이언맨"
 search: true
-categories: 
-  - test
 tags: 
   - issac
 toc: true
 comments: true
 
-last_modified_at: 2017-09-16T00:03:00+09:00
+last_modified_at: 2019-09-21 00:00:00 -0600 # 게시물 수정 일
 
 # -- 블로그 글위에 이미지 추가
 header:
