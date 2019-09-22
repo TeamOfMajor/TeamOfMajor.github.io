@@ -64,24 +64,24 @@ header:
 ![screenshot](/assets/images/terraforminstall/3.png)
 
 4. terraform 환경변수 등록
-- 설치경로 입력 "C:\terraform"
+-설치경로 입력 "C:\terraform"
 ![screenshot](/assets/images/terraforminstall/4.png)
 
 5. 명령프롬프트 실행하여 Terraform 실행
-- 테라폼에 대한 명령어를 확인 할 수 있다
+-테라폼에 대한 명령어를 확인 할 수 있다
 ![screenshot](/assets/images/terraforminstall/5.png)
 
 6. terraform 초기화 진행
-- 테라폼 본체에 프로바이더들이 포함되어 있었지만 0.10 버전 부터
+-테라폼 본체에 프로바이더들이 포함되어 있었지만 0.10 버전 부터
 프로바이더가 플러그인으로 분리되었고 이에 따라 테라폼 프로젝트를 별도로 초기화할 필요가 있다.
 테라폼은 테라폼 프로젝트를 초기화할 때 프로바이더 설정을 보고 필요한 플러그인을 설치 한다.
-- 여기까지 성공했다면 테라폼 사용준비가 완료된 상태이다
-- "8"번 부터는 번외이니 참고만 하면된다
+-여기까지 성공했다면 테라폼 사용준비가 완료된 상태이다
+-"8"번 부터는 번외이니 참고만 하면된다
 ![screenshot](/assets/images/terraforminstall/6.png)
 
 7. 환경변수 잡지 않고 사용할 때
-- 명령프롬프트 관리자 권한 실행
-- set PATH=%PATH%;C:\terraform
+-명령프롬프트 관리자 권한 실행
+-set PATH=%PATH%;C:\terraform
 ![screenshot](/assets/images/terraforminstall/7.png)
 
 8. terraform 명령어 실행 시 아래와 같이 나와야 한다
