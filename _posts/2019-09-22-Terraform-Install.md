@@ -55,8 +55,7 @@ header:
 1. 우선 테라폼 설치파일을 다운받는다(상단 다운로드 링크 클릭)
 
 2. terraform.exe 파일 다운로드 후 C:\terraform 디렉토리 저장
-
-![screenshot](/assets/images/hannah-rodrigo-mf_3yZnC6ug-unsplash.jpg)
+![screenshot](/assets/images/terraforminstall/1.png)
 
 - EC2 <u>z한글 밑줄을 봐야지 알지</u>
 
