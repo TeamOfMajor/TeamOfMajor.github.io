@@ -76,7 +76,7 @@ header:
 프로바이더가 플러그인으로 분리되었고 이에 따라 테라폼 프로젝트를 별도로 초기화할 필요가 있다.
 테라폼은 테라폼 프로젝트를 초기화할 때 프로바이더 설정을 보고 필요한 플러그인을 설치 한다.
 - 여기까지 성공했다면 테라폼 사용준비가 완료된 상태이다
-- 7번 부터는 번외이니 참고만 하면된다
+- "8"번 부터는 번외이니 참고만 하면된다
 ![screenshot](/assets/images/terraforminstall/6.png)
 
 7. 환경변수 잡지 않고 사용할 때
@@ -88,13 +88,13 @@ header:
 ![screenshot](/assets/images/terraforminstall/8.png)
 
 
-
+---
 - <u>Terraform 사용팁</u>
 
 ```markdown
 테라폼은 해당 디렉토리에 모든 tf 파일을 읽는다
-terraform plan 명령어를 통하여 올바르게 코드가 작성되었는지 시뮬레이션을 한다
+terraform plan로 올바르게 코드가 작성되었는지 시뮬레이션 가능
 - 미리 구성을 테스트 해 볼 수 있다
 - 실수로 인프라를 변경하지 않도록 확인이 가능
-terraform apply 명령어를 통하여 적용
+terraform apply로 적용한다
 ```
