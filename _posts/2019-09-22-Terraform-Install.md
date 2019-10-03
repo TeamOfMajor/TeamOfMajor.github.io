@@ -60,14 +60,14 @@ header:
 
 ### 설치방법
 
-1. terraform.exe 설치파일을 다운받는다(상단 다운로드 링크 클릭)
+1. terraform.exe 설치파일을 다운받는다(상단 다운로드 링크 클릭)  
 
 
-2. terraform.exe 파일 다운로드 후 C:\terraform 디렉토리 저장 (C:\terraform 디렉토리 사전 생성)
+2. terraform.exe 파일 다운로드 후 C:\terraform 디렉토리 저장 (C:\terraform 디렉토리 사전 생성)  
 ![screenshot](/assets/images/terraforminstall/1.png)
 
 
-3. 환경변수 등록 (내컴퓨터 > 고급시스템 속성 > 고급 > 환경변수)
+3. 환경변수 등록 (내컴퓨터 > 고급시스템 속성 > 고급 > 환경변수)  
 ![screenshot](/assets/images/terraforminstall/2.png)
 
 
