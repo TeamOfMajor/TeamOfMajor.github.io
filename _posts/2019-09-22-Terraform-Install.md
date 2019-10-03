@@ -72,7 +72,7 @@ header:
 
 3. 환경변수 등록   
 - 내컴퓨터 > 고급시스템 속성 > 고급 > 환경변수  
-![screenshot](/assets/images/terraforminstall/2.png "width:300px;height:100px")
+![screenshot](/assets/images/terraforminstall/2.png "width:250px;height:100px")
 
 
 4. 환경변수 등록  
@@ -82,7 +82,7 @@ header:
 
 5. Terraform 환경변수 등록  
 - 새로만들기 > 설치경로 입력 "C:\terraform"  
-![screenshot](/assets/images/terraforminstall/4.png "width:300px;height:100px")  
+![screenshot](/assets/images/terraforminstall/4.png "width:250px;height:100px")  
 
 
 6. 명령 프롬프트 실행하여 Terraform 실행  
