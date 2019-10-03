@@ -38,7 +38,7 @@ header:
 
 
 
-## Terraform With Windows 설치
+### Terraform With Windows 설치
 
 **Windows 에서 Terraform을 사용할 수 있는 방법입니다**
 
@@ -59,50 +59,50 @@ header:
 
 ---
 
-#### 설치방법
+### 설치방법
 
 1. terraform.exe 설치파일을 다운받는다(상단 다운로드 링크 클릭)  
 
 
 2. terraform.exe 파일 다운로드 후 C:\terraform 디렉토리 저장 (C:\terraform 디렉토리 사전 생성)  
-![screenshot](/assets/images/terraforminstall/1.png)
+![screenshot](/assets/images/terraforminstall/1.png)  
 
 
 3. 환경변수 등록 (내컴퓨터 > 고급시스템 속성 > 고급 > 환경변수)  
-![screenshot](/assets/images/terraforminstall/2.png)
+![screenshot](/assets/images/terraforminstall/2.png)  
 
 
-4. 시스템 변수 > Path 편집
-![screenshot](/assets/images/terraforminstall/3.png)
+4. 시스템 변수 > Path 편집  
+![screenshot](/assets/images/terraforminstall/3.png)  
 
 
-5. Terraform 환경변수 등록
-- 새로만들기 > 설치경로 입력 "C:\terraform"
-![screenshot](/assets/images/terraforminstall/4.png)
+5. Terraform 환경변수 등록  
+- 새로만들기 > 설치경로 입력 "C:\terraform"  
+![screenshot](/assets/images/terraforminstall/4.png)  
 
 
-6. 명령 프롬프트 실행하여 Terraform 실행
-- 테라폼에 대한 명령어를 확인 할 수 있다
-![screenshot](/assets/images/terraforminstall/5.png)
+6. 명령 프롬프트 실행하여 Terraform 실행  
+- 테라폼에 대한 명령어를 확인 할 수 있다  
+![screenshot](/assets/images/terraforminstall/5.png)  
 
 
-7. Terraform 초기화 진행
+7. Terraform 초기화 진행  
 - 테라폼 본체에 프로바이더들이 포함되어 있었지만 0.10 버전 부터
 프로바이더가 플러그인으로 분리되었고 이에 따라 테라폼 프로젝트를 별도로 초기화할 필요가 있다
 테라폼은 테라폼 프로젝트를 초기화할 때 프로바이더 설정을 보고 필요한 플러그인을 설치 한다
 - 여기까지 성공했다면 테라폼 사용준비가 완료된 상태이다
 - "8"번 부터는 번외이니 참고만 하면된다  
-![screenshot](/assets/images/terraforminstall/6.png)
+![screenshot](/assets/images/terraforminstall/6.png)  
 
 
 8. 환경변수 잡지 않고 사용할 때
 - 명령 프롬프트 관리자 권한 실행
 - set PATH=%PATH%;C:\terraform  
-![screenshot](/assets/images/terraforminstall/7.png)
+![screenshot](/assets/images/terraforminstall/7.png)  
 
 
 9. terraform 명령어 실행 시 아래와 같이 나와야 한다
-![screenshot](/assets/images/terraforminstall/8.png)
+![screenshot](/assets/images/terraforminstall/8.png)  
 
 
 ---
