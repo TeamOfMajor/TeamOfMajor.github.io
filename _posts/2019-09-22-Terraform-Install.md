@@ -95,13 +95,13 @@ header:
 ![screenshot](/assets/images/terraforminstall/6.png)  
 
 
-8. 환경변수 잡지 않고 사용할 때
-- 명령 프롬프트 관리자 권한 실행
+8. 환경변수 잡지 않고 사용할 때  
+- 명령 프롬프트 관리자 권한 실행  
 - set PATH=%PATH%;C:\terraform  
 ![screenshot](/assets/images/terraforminstall/7.png)  
 
 
-9. terraform 명령어 실행 시 아래와 같이 나와야 한다
+9. terraform 명령어 실행 시 아래와 같이 나와야 한다  
 ![screenshot](/assets/images/terraforminstall/8.png)  
 
 
