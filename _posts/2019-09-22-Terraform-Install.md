@@ -67,12 +67,12 @@ header:
 
 2. terraform.exe 다운로드  
 - 상단 Download 링크를 통하여 Terraform.exe 다운로드  
-![screenshot](/assets/images/terraforminstall/1.png)  
+![screenshot](/assets/images/terraforminstall/1.png){:.alignleft} 
 
 
 3. 환경변수 등록   
 - 내컴퓨터 > 고급시스템 속성 > 고급 > 환경변수  
-![screenshot](/assets/images/terraforminstall/2.png)  
+![screenshot](/assets/images/terraforminstall/2.png){:.alignleft} 
 
 
 4. 환경변수 등록  
