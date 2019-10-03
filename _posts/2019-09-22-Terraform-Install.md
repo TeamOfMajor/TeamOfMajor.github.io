@@ -44,12 +44,13 @@ header:
 
 
 ### Terraform ?
-#### - hashicorp에서 오픈소스로 개발중인 인프라스트럭처 관리 도구 입니다
-#### - 코드로써 IaC(Infrstructure as Code)를 지향하고 있는 도구 입니다
-#### - GUI 및 Web Console 을 사용하지 않는 대신 코드로써 인프라를 관리할 수 있는 도구 입니다
-#### - Cloud에 최적화 된 코드이며 AWS, Azure, GCP 등 모두 사용이 가능합니다.
-#### - Terraform 기능 및 설명에 대해서는 다음 주제에서 자세히 다룰 예정입니다.
+- hashicorp에서 오픈소스로 개발중인 인프라스트럭처 관리 도구 입니다
+- 코드로써 IaC(Infrstructure as Code)를 지향하고 있는 도구 입니다
+- GUI 및 Web Console 을 사용하지 않는 대신 코드로써 인프라를 관리할 수 있는 도구 입니다
+- Cloud에 최적화 된 코드이며 AWS, Azure, GCP 등 모두 사용이 가능합니다.
+- Terraform 기능 및 설명에 대해서는 다음 주제에서 자세히 다룰 예정입니다.
 
+---
 
 ### 소개
 - 아래 환경은 Windows 10 으로 진행 하였습니다.
@@ -58,7 +59,7 @@ header:
 
 ---
 
-## 설치방법
+#### 설치방법
 
 1. terraform.exe 설치파일을 다운받는다(상단 다운로드 링크 클릭)  
 
