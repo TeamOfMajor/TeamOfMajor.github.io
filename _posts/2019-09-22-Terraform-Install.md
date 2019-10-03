@@ -72,7 +72,7 @@ header:
 
 3. 환경변수 등록   
 - 내컴퓨터 > 고급시스템 속성 > 고급 > 환경변수  
-![screenshot](/assets/images/terraforminstall/2.png){:.alignleft} 
+![screenshot](/assets/images/terraforminstall/2.png){:.alignright}
 
 
 4. 환경변수 등록  
