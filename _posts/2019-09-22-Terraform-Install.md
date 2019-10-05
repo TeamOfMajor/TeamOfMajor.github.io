@@ -74,7 +74,7 @@ header:
 3. 환경변수 등록   
 - 내컴퓨터 > 고급시스템 속성 > 고급 > 환경변수  
 ![screenshot](/assets/images/terraforminstall/2.png "width:250px;height:100px")
-<img src="/assets/images/terraforminstall/2.png" width="70%">
+<img src="/assets/images/terraforminstall/2.png" width="75%">
 
 4. 환경변수 등록  
 - 시스템 변수 > Path 편집  
