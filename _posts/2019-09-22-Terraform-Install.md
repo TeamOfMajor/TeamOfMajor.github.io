@@ -67,29 +67,29 @@ header:
 
 2. terraform.exe 다운로드  
 - 상단 Download 링크를 통하여 Terraform.exe 다운로드  
-![screenshot](/assets/images/terraforminstall/1.png "width:200px;height:100px") 
+<!-- ![screenshot](/assets/images/terraforminstall/1.png "width:200px;height:100px")  -->
 <img src="/assets/images/terraforminstall/1.png" width="80%">
 
 
 3. 환경변수 등록   
 - 내컴퓨터 > 고급시스템 속성 > 고급 > 환경변수  
-![screenshot](/assets/images/terraforminstall/2.png "width:250px;height:100px")
+<!-- ![screenshot](/assets/images/terraforminstall/2.png "width:250px;height:100px") -->
 <img src="/assets/images/terraforminstall/2.png" width="75%">
 
 4. 환경변수 등록  
 - 시스템 변수 > Path 편집  
-![screenshot](/assets/images/terraforminstall/3.png "width:300px;height:100px")  
-
+<!-- ![screenshot](/assets/images/terraforminstall/3.png "width:300px;height:100px")   -->
+<img src="/assets/images/terraforminstall/3.png" width="75%">
 
 5. Terraform 환경변수 등록  
 - 새로만들기 > 설치경로 입력 "C:\terraform"  
-![screenshot](/assets/images/terraforminstall/4.png "width:250px;height:100px")  
-
+<!-- ![screenshot](/assets/images/terraforminstall/4.png "width:250px;height:100px")   -->
+<img src="/assets/images/terraforminstall/4.png" width="75%">
 
 6. 명령 프롬프트 실행하여 Terraform 실행  
 - 테라폼에 대한 명령어를 확인 할 수 있습니다.  
-![screenshot](/assets/images/terraforminstall/5.png "width:250px;height:100px")  
-
+<!-- ![screenshot](/assets/images/terraforminstall/5.png "width:250px;height:100px")   -->
+<img src="/assets/images/terraforminstall/5.png" width="75%">
 
 7. Terraform 초기화 진행  
 - 테라폼 본체에 프로바이더들이 포함되어 있었지만 0.10 버전 부터
@@ -97,19 +97,19 @@ header:
 테라폼은 테라폼 프로젝트를 초기화할 때 프로바이더 설정을 보고 필요한 플러그인을 설치 합니다.
 - 여기까지 성공했다면 테라폼 사용준비가 완료된 상태입니다.
 - "8"번 부터는 번외이니 참고만 하면 됩니다.  
-![screenshot](/assets/images/terraforminstall/6.png "width:250px;height:100px")  
-
+<!-- ![screenshot](/assets/images/terraforminstall/6.png "width:250px;height:100px")   -->
+<img src="/assets/images/terraforminstall/6.png" width="75%">
 
 8. 환경변수 잡지 않고 사용할 때  
 - 명령 프롬프트 관리자 권한 실행  
 - set PATH=%PATH%;C:\terraform  
-![screenshot](/assets/images/terraforminstall/7.png "width:300px;height:100px")  
-
+<!-- ![screenshot](/assets/images/terraforminstall/7.png "width:300px;height:100px")   -->
+<img src="/assets/images/terraforminstall/7.png" width="75%">
 
 9. terraform 사용가능 여부 확인 
 - terraform 명령어 실행 시 아래와 같이 나와야 합니다  
-![screenshot](/assets/images/terraforminstall/8.png "width:250px;height:100px")  
-
+<!-- ![screenshot](/assets/images/terraforminstall/8.png "width:250px;height:100px")   -->
+<img src="/assets/images/terraforminstall/8.png" width="75%">
 
 ---
 - <u>Terraform TIP</u>
