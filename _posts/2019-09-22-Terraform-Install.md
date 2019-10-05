@@ -87,16 +87,17 @@ header:
 <img src="/assets/images/terraforminstall/4.png" width="75%">
 
 6. 명령 프롬프트 실행하여 Terraform 실행  
-- 테라폼에 대한 명령어를 확인 할 수 있습니다.  
+- 테라폼에 대한 명령어를 확인 할 수 있습니다  
 <!-- ![screenshot](/assets/images/terraforminstall/5.png "width:250px;height:100px")   -->
 <img src="/assets/images/terraforminstall/5.png" width="75%">
 
 7. Terraform 초기화 진행  
 - 테라폼 본체에 프로바이더들이 포함되어 있었지만 0.10 버전 부터
-프로바이더가 플러그인으로 분리되었고 이에 따라 테라폼 프로젝트를 별도로 초기화할 필요가 있습니다.
-테라폼은 테라폼 프로젝트를 초기화할 때 프로바이더 설정을 보고 필요한 플러그인을 설치 합니다.
-- 여기까지 성공했다면 테라폼 사용준비가 완료된 상태입니다.
-- "8"번 부터는 번외이니 참고만 하면 됩니다.  
+프로바이더가 플러그인으로 분리 되었습니다  
+- 이에 따라 테라폼 프로젝트를 별도로 초기화할 필요가 있습니다  
+- 테라폼은 테라폼 프로젝트를 초기화할 때 프로바이더 설정을 보고 필요한 플러그인을 설치 합니다  
+- 여기까지 성공했다면 테라폼 사용준비가 완료된 상태입니다  
+- "8"번 부터는 번외이니 참고만 하면 됩니다    
 <!-- ![screenshot](/assets/images/terraforminstall/6.png "width:250px;height:100px")   -->
 <img src="/assets/images/terraforminstall/6.png" width="75%">
 
