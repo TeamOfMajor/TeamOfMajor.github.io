@@ -67,7 +67,7 @@ header:
 
 2. terraform.exe 다운로드  
 - 상단 Download 링크를 통하여 Terraform.exe 다운로드  
-![screenshot](/assets/images/terraforminstall/1.png "width:300px;height:100px") 
+![screenshot](/assets/images/terraforminstall/1.png "width:200px;height:100px") 
 
 
 3. 환경변수 등록   
