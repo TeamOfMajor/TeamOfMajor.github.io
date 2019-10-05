@@ -40,10 +40,11 @@ header:
 
 ### Terraform With Windows 설치
 
+
 **Windows 에서 Terraform을 사용할 수 있는 방법입니다**
 
 
-### Terraform ?
+### Terraform 이란?
 - hashicorp에서 오픈소스로 개발중인 인프라스트럭처 관리 도구 입니다
 - 코드로써 IaC(Infrstructure as Code)를 지향하고 있는 도구 입니다
 - GUI 및 Web Console 을 사용하지 않는 대신 코드로써 인프라를 관리할 수 있는 도구 입니다
