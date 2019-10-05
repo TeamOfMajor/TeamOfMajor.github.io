@@ -68,13 +68,13 @@ header:
 2. terraform.exe 다운로드  
 - 상단 Download 링크를 통하여 Terraform.exe 다운로드  
 ![screenshot](/assets/images/terraforminstall/1.png "width:200px;height:100px") 
-<img src="/assets/images/terraforminstall/1.png" width="60%">
+<img src="/assets/images/terraforminstall/1.png" width="90%">
 
 
 3. 환경변수 등록   
 - 내컴퓨터 > 고급시스템 속성 > 고급 > 환경변수  
 ![screenshot](/assets/images/terraforminstall/2.png "width:250px;height:100px")
-
+<img src="/assets/images/terraforminstall/2.png" width="90%">
 
 4. 환경변수 등록  
 - 시스템 변수 > Path 편집  
