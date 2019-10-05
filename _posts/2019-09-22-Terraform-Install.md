@@ -87,7 +87,7 @@ header:
 
 6. 명령 프롬프트 실행하여 Terraform 실행  
 - 테라폼에 대한 명령어를 확인 할 수 있다  
-![screenshot](/assets/images/terraforminstall/5.png "width:300px;height:100px")  
+![screenshot](/assets/images/terraforminstall/5.png "width:250px;height:100px")  
 
 
 7. Terraform 초기화 진행  
@@ -96,7 +96,7 @@ header:
 테라폼은 테라폼 프로젝트를 초기화할 때 프로바이더 설정을 보고 필요한 플러그인을 설치 한다
 - 여기까지 성공했다면 테라폼 사용준비가 완료된 상태이다
 - "8"번 부터는 번외이니 참고만 하면된다  
-![screenshot](/assets/images/terraforminstall/6.png "width:300px;height:100px")  
+![screenshot](/assets/images/terraforminstall/6.png "width:250px;height:100px")  
 
 
 8. 환경변수 잡지 않고 사용할 때  
@@ -107,7 +107,7 @@ header:
 
 9. terraform 사용가능 여부 확인 
 - terraform 명령어 실행 시 아래와 같이 나와야 한다  
-![screenshot](/assets/images/terraforminstall/8.png "width:300px;height:100px")  
+![screenshot](/assets/images/terraforminstall/8.png "width:250px;height:100px")  
 
 
 ---
