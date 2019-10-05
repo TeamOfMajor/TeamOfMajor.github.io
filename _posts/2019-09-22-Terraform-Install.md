@@ -116,9 +116,9 @@ header:
 - <u>Terraform TIP</u>
 
 ```markdown
-Terraform은 해당 디렉토리에 모든 .tf 파일을 읽습니다.
-<u>terraform plan</u>로 올바르게 코드가 작성되었는지 시뮬레이션 가능합니다.
+Terraform은 해당 디렉토리에 모든 .tf 파일을 읽음
+**terraform plan**로 올바르게 코드가 작성되었는지 시뮬레이션 가능
 - 미리 구성을 테스트 해 볼 수 있습니다.
-- 실수로 인프라를 변경하지 않도록 확인이 가능합니다.
-<u>terraform apply</u>로 적용합니다.
+- 실수로 인프라를 변경하지 않도록 확인이 가능
+**terraform apply**로 적용
 ```
