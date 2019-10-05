@@ -47,15 +47,15 @@ header:
 - hashicorp에서 오픈소스로 개발중인 인프라스트럭처 관리 도구 입니다
 - 코드로써 IaC(Infrstructure as Code)를 지향하고 있는 도구 입니다
 - GUI 및 Web Console 을 사용하지 않는 대신 코드로써 인프라를 관리할 수 있는 도구 입니다
-- Cloud에 최적화 된 코드이며 AWS, Azure, GCP 등 모두 사용이 가능합니다.
-- Terraform 기능 및 설명에 대해서는 다음 주제에서 자세히 다룰 예정입니다.
+- Cloud에 최적화 된 코드이며 AWS, Azure, GCP 등 모두 사용이 가능합니다
+- Terraform 기능 및 설명에 대해서는 다음 주제에서 자세히 다룰 예정입니다
 
 ---
 
 ### 소개
-- 아래 환경은 Windows 10 으로 진행 하였습니다.
-- Linux 및 Mac에서 설치는 따로 다루도록 하겠습니다.
-- 설치 방법은 간단하며 환경 변수를 지정하여 바로 실행이 가능하다
+- 아래 환경은 Windows 10 으로 진행 하였습니다
+- Linux 및 Mac에서 설치는 따로 다루도록 하겠습니다
+- 설치 방법은 간단하며 환경 변수를 지정하여 바로 실행이 가능합니다
 
 ---
 
@@ -68,6 +68,7 @@ header:
 2. terraform.exe 다운로드  
 - 상단 Download 링크를 통하여 Terraform.exe 다운로드  
 ![screenshot](/assets/images/terraforminstall/1.png "width:200px;height:100px") 
+<img src="/assets/images/terraforminstall/1.png" width="60%">
 
 
 3. 환경변수 등록   
@@ -86,16 +87,16 @@ header:
 
 
 6. 명령 프롬프트 실행하여 Terraform 실행  
-- 테라폼에 대한 명령어를 확인 할 수 있다  
+- 테라폼에 대한 명령어를 확인 할 수 있습니다.  
 ![screenshot](/assets/images/terraforminstall/5.png "width:250px;height:100px")  
 
 
 7. Terraform 초기화 진행  
 - 테라폼 본체에 프로바이더들이 포함되어 있었지만 0.10 버전 부터
-프로바이더가 플러그인으로 분리되었고 이에 따라 테라폼 프로젝트를 별도로 초기화할 필요가 있다
-테라폼은 테라폼 프로젝트를 초기화할 때 프로바이더 설정을 보고 필요한 플러그인을 설치 한다
-- 여기까지 성공했다면 테라폼 사용준비가 완료된 상태이다
-- "8"번 부터는 번외이니 참고만 하면된다  
+프로바이더가 플러그인으로 분리되었고 이에 따라 테라폼 프로젝트를 별도로 초기화할 필요가 있습니다.
+테라폼은 테라폼 프로젝트를 초기화할 때 프로바이더 설정을 보고 필요한 플러그인을 설치 합니다.
+- 여기까지 성공했다면 테라폼 사용준비가 완료된 상태입니다.
+- "8"번 부터는 번외이니 참고만 하면 됩니다.  
 ![screenshot](/assets/images/terraforminstall/6.png "width:250px;height:100px")  
 
 
@@ -106,12 +107,12 @@ header:
 
 
 9. terraform 사용가능 여부 확인 
-- terraform 명령어 실행 시 아래와 같이 나와야 한다  
+- terraform 명령어 실행 시 아래와 같이 나와야 합니다  
 ![screenshot](/assets/images/terraforminstall/8.png "width:250px;height:100px")  
 
 
 ---
-- <u>Terraform 사용팁</u>
+- <u>Terraform TIP</u>
 
 ```markdown
 테라폼은 해당 디렉토리에 모든 tf 파일을 읽는다
