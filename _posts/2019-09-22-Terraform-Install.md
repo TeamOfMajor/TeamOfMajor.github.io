@@ -117,8 +117,8 @@ header:
 
 ```markdown
 Terraform은 해당 디렉토리에 모든 .tf 파일을 읽음
-**terraform plan**로 올바르게 코드가 작성되었는지 시뮬레이션 가능
-- 미리 구성을 테스트 해 볼 수 있습니다.
+terraform plan로 올바르게 코드가 작성되었는지 시뮬레이션 가능
+- 작성한 코드에 대하여 미리 테스트 하여 올바른지 확인 가능
 - 실수로 인프라를 변경하지 않도록 확인이 가능
-**terraform apply**로 적용
+terraform apply로 적용
 ```
