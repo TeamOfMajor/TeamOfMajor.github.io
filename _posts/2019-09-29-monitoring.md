@@ -76,16 +76,6 @@ header:
     - 수집된 매트릭에 대한 자료를 한눈에 볼 수 있도록 시각화를 지원합니다.
     - 수많은 대시보드 템플릿 및 데이터 소스(Influxdb, CloudWatch, ETC.)를 지원합니다.
 
-## Monitoring Flowchart
-{% mermaid %}
-graph LR
-    AWS --> CloudWatch
-    On-premise --> Telegraf.
-    Telegraf. --> Influxdb.
-    CloudWatch -->|AccessKey| Influxdb.
-    Influxdb. --> Grafana.
-{% endmermaid %}
-
 ## Monitoring Installation (OS: Ubuntu18.04)
 1.[Grafana Installing](https://grafana.com/docs/installation/debian/)
 
