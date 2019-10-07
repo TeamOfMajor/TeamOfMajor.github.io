@@ -19,7 +19,7 @@ categories: # 작성 글 형식 내용에서 맞게 아래 주석에서 최대 2
 #  - App # 어플리케이션
 #  - DevOps # 데브옵스 환경 & 문화 안내
 #  - IaC # 소스 코드를 통한 인프라 구성
-#  - OpenSource # 오픈 소스
+  - OpenSource # 오픈 소스
 #  - POC # 기술 검증 & 개념 검증
 #  - BMT # 성능테스트
 tags: 

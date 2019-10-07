@@ -238,6 +238,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-last-modified-at
   - jemoji
+  - jekyll-mermaid
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -247,9 +248,8 @@ whitelist:
   - jekyll-feed
   - jekyll-include-cache
 
-#mermaid 실패
 mermaid:
-  src: '/assets/js/mermaid/mermaid.js'
+  src: "/assets/js/mermaid/mermaid.js"
 
 # Archives
 #  Type
