@@ -226,7 +226,7 @@ systemctl status telegraf
 **[Grafana Dashboard](https://grafana.com/grafana/dashboards)**
 
 - Telegraf Dashboard
-Grafana 웹피이지 > Dashboards > Import
+Grafana 웹페이지 > Dashboards > Import
 ![Dashboard3](/assets/images/post/2019/cloudwatch-id-1.png)
 - ID는 위의 Grafana Dashboard URL에서 마음에 드는 Dashboard 찾아서 입력<br>
 (블로그에서 사용하는 [Dashboard 링크](https://grafana.com/grafana/dashboards/1375))
@@ -238,7 +238,7 @@ Grafana 웹피이지 > Dashboards > Import
 ![Dashboard5](/assets/images/post/2019/linux-Dashboard.png)
 
 - AWS-CloudWatch Dashboard
-Grafana 웹피이지 > Dashboards > New dashboard > Add Query
+Grafana 웹페이지 > Dashboards > New dashboard > Add Query
 ![Dashboard1](/assets/images/post/2019/cloud-ec2.png)
     - Query: CloudWatch
     - Region: 사용하는 리전 지정
