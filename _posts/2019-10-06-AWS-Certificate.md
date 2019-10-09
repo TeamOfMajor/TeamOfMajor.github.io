@@ -122,8 +122,8 @@ header:
 <img src="/assets/images/AWSCert/10.png" width="80%">  
 
 14. AWS 자격증 RoadMap  
-- 2018년 기준  
-<img src="/assets/images/AWSCert/11.png" width="80%">  
+- 2019년 10월 기준  
+<img src="/assets/images/AWSCert/12.png" width="80%">  
 
 
 ---
