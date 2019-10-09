@@ -64,19 +64,19 @@ header:
 2. AWS Training Center 로그인  
 - AWS 자격증 계정 선택  
 <!-- ![screenshot](/assets/images/terraforminstall/1.png "width:200px;height:100px")  -->
-<img src="/assets/images/AWSCert/1.png" width="80%">  
+<img src="/assets/images/AWSCert/01.png" width="80%">  
 - 첫번째 기존 Amazon 계정으로 로그인 선택  
-<img src="/assets/images/AWSCert/2.png" width="80%">  
+<img src="/assets/images/AWSCert/02.png" width="80%">  
 
 3. AWS 시험 스케줄 등록    
-- 상단의 Upcoming Exam > Schedule New Exam 선택  
+- Home > Schedule New Exam 선텍  
 <!-- ![screenshot](/assets/images/terraforminstall/2.png "width:250px;height:100px") -->
-<img src="/assets/images/AWSCert/3.png" width="80%">    
+<img src="/assets/images/AWSCert/03.png" width="80%">    
 
 4. 시험 선택  
 - 원하는 시험과목 선택    
 <!-- ![screenshot](/assets/images/terraforminstall/3.png "width:300px;height:100px")   -->
-<img src="/assets/images/AWSCert/4.png" width="80%">  
+<img src="/assets/images/AWSCert/04.png" width="80%">  
 
 5. 시험 언어 선택  
 - 일부 Assosiate 및 특정 시험은 한국어 지원 가능  
