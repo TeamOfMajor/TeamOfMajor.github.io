@@ -130,7 +130,7 @@ systemctl enable influxdb
 ```
 
 3.[Telegraf Installing](https://www.influxdata.com/get-influxdb/)
-- Download ~~모니터링 대상 서버의 패키지 관리를 위해 다운로드 형식으로 진행~~ 
+- Download ~~(모니터링 대상 서버의 패키지 관리를 위해 다운로드 형식으로 진행)~~ 
 ```bash
 wget https://dl.influxdata.com/telegraf/releases/telegraf_1.12.2-1_amd64.deb
 ```
@@ -185,7 +185,7 @@ systemctl enable telegraf
     - Access Type: Programmatic access
     - Set permissions: Attach existing policies directly
     - Filter policies: 1번에서 생성한 Policy Name 등록
-    - Create User: Download .csv
+    - Create User: Download.csv (credentials.csv)
 
 ## Monitoring Setup
 **[Grafana Datasources Setup](https://grafana.com/docs/features/datasources/) & Monitoring Agent(Telegraf)**
@@ -228,13 +228,13 @@ systemctl status telegraf
 - Telegraf Dashboard
 Grafana 웹피이지 > Dashboards > Import
 ![Dashboard3](/assets/images/post/2019/cloudwatch-id-1.png)
-:point_up:ID는 위의 Grafana Dashboard URL에서 마음에 드는 Dashboard 찾아서 입력<br>
+- ID는 위의 Grafana Dashboard URL에서 마음에 드는 Dashboard 찾아서 입력<br>
 (블로그에서 사용하는 [Dashboard 링크](https://grafana.com/grafana/dashboards/1375))
 ![Dashboard4](/assets/images/post/2019/Telegraf-id-1.png)
     - Name/Folder/Unique identifier (uid): 임의 지정
     - servermonitor: InfluxDB
-    <br>
-    :point_up:와 같이 설정하면 :point_down:와 같이 확인 가능
+
+- 커뮤니티 Dashboard를 적용하여 표현
 ![Dashboard5](/assets/images/post/2019/linux-Dashboard.png)
 
 - AWS-CloudWatch Dashboard
@@ -244,9 +244,9 @@ Grafana 웹피이지 > Dashboards > New dashboard > Add Query
     - Region: 사용하는 리전 지정
     - Metric: 확인하고 싶은 매트릭 지정
     - Dimensions: InstanceId = 타겟-InstanceId
-    <br>
-    :point_up:와 같이 설정하고 다양한 차트만 으로 :point_down:와 같이 표현 가능
-    ![Dashboard1](/assets/images/post/2019/grafana-cloud2.png)
+
+- 다양한 차트로 표현
+![Dashboard1](/assets/images/post/2019/grafana-cloud2.png)
 
 ## Conclusion
 설치 명령어 10줄 정도와 설정 파일 내용을 한두 번 변경하면서 AWS & On-premise 모두를 모니터링할 수 있는 환경의 기초를 마련했습니다. 지금 보여드린 부분은 Grafana, Influxdb, Telegraf, CloudWatch 기능에 극히 일부분 및 모니터링 구성에서 보안 요구 사항이 전혀 반영되지 않은 설정이지만 위와 같이 최대한 간결하게라도 구성을 경험하는데 취지를 두고 작성하였습니다.:smiley:
