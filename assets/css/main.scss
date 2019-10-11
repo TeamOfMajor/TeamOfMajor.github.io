@@ -6,3 +6,8 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+@font-face {
+    font-family: "Gidole-Regular";
+        src: url( '../_assets/fonts/Gidole-Regular.ttf') format( 'truetype');
+}

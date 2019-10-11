@@ -14,7 +14,9 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
+  gem "minimal-mistakes-jekyll"
+  gem "jekyll-last-modified-at"
 end
 
-gem "minimal-mistakes-jekyll"
-gem "jekyll-last-modified-at"
+#gem "minimal-mistakes-jekyll"
+#gem "jekyll-last-modified-at"

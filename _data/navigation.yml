@@ -14,7 +14,7 @@ main:
   #  url: /year-archive/
   - title: "tag"
     url: /tags/
-#  - title: "Category"
-#    url: /categories/
+  - title: "Category"
+    url: /categories/
   - title: "About"
     url: /about/
