@@ -2,7 +2,7 @@
 
 layout: single
 
-title: Terraform-Credentials # 제목은 명확하고 간결하게 쓰기
+title: Terraform Credentials # 제목은 명확하고 간결하게 쓰기
 excerpt: "블랙위도우" # 작성자 닉네임(마블)
 search: true
 categories: # 작성 글 형식 내용에서 맞게 아래 주석에서 최대 2개 선택
@@ -35,7 +35,8 @@ comments: true
 # -- 블로그 글위에 색상 추가
 xcerpt: "This post should display a **header with a solid background color**, if the theme #supports it."
 header:
-  overlay_color: "#333"
+  #overlay_color: "#333"
+  overlay_image: /assets/images/hannah-rodrigo-mf_3yZnC6ug-unsplash.jpg
 
 ## -- 블로그 글위에 이미지 추가
 #header:
@@ -58,7 +59,7 @@ header:
 
 ---
 # Terraform Credentials
-> Terraform 을 사용하기 위해서는 Cloud Platform 별로 Access Key가 필요합니다.
+> Terraform 경우 provider.tf 에서 인증처리를 하고 있으며, 인증을 받기 위해서는 Key 가 필요합니다. 
 **AWS** 를 예로들면 Access Key 및 Secert Key 가 필요하며, 해당 Key는 노출이 되어서는 안됩니다.
 노출될 경우 악의적인 사람들로 인하여 무분별하게 리소스를 생성하여 엄청난 비용이 추가 될 수 있습니다.
 아래 내용은 **Terraform** 사용 시 코드에 Access Key 및 Secert Key 를 직접 쓰지 않고 파일 형태로 사용하는 내용 입니다.
