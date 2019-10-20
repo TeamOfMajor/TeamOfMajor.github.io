@@ -63,65 +63,31 @@ header:
 노출될 경우 악의적인 사람들로 인하여 무분별하게 리소스를 생성하여 엄청난 비용이 추가 될 수 있습니다.
 아래 내용은 **Terraform** 사용 시 코드에 Access Key 및 Secert Key 를 직접 쓰지 않고 파일 형태로 사용하는 내용 입니다.
 
-## Monitoring Tool
-- Influxdb
-    - Go 언어로 작성되어 외부 의존성이 없습니다.
-    - 다양한 API, HTTP(S)를 제공한다.
-    - 시계열 데이터베이스로 시간 순서에 따라 저장하고 조회하는 기능으로 인해 실시간 비교가 필요한 모니터링에 적합합니다.
-- Telegraf
-    - Go 언어로 작성되어 외부 의존성이 없습니다. (Influxdb와 동일한 업체에서 개발)
-    - 다양한 매트릭을 수집하여 데이터베이스로 보내는 에이전트입니다.
-    - 다양한 메트릭을 수집하기 위해 수많은 In-Out Put 플러그인을 제공합니다.
-- CloudWatch
-    - AWS에서 운영되고 있는 서비스를 모니터링을 할 수 있게 해주는 서비스입니다.
-    - 별도의 CloudWatch Agent를 다운받아서 On-premise에서 운영이 가능합니다.
-    - 별도 다운받아 사용 할 수 있듯 커스텀 매트릭 설정이 가능합니다.
-- Grafana
-    - 수집된 매트릭에 대한 자료를 한눈에 볼 수 있도록 시각화를 지원합니다.
-    - 수많은 대시보드 템플릿 및 데이터 소스(Influxdb, CloudWatch, ETC.)를 지원합니다.
+## 사전조건
+- Windows OS 환경에서 진행
+- AWS CLI 설치 필요
+    - OS 별 각각 AWS CLI 설치 방법이 다르며 링크 참조하여 설치 진행
+    - https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html
 
-## Monitoring Flowchart
-<script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
-<div class="mermaid">
-graph LR
-    AWS --> CloudWatch
-    On-premise --> Telegraf.
-    Telegraf. --> Influxdb.
-    CloudWatch -->|AccessKey| Influxdb.
-    Influxdb. --> Grafana.
-</div>
 
-## Monitoring Installation (OS: Ubuntu18.04)
-1.[Grafana Installing](https://grafana.com/docs/installation/debian/)
+## Credentials 등록
+- 명령 프롬프트에서 아래와 같이 실행
+```bash
+C:\Users\user>aws configure
+```
+- Key 및 Region 등록
+```bash
+AWS Access Key ID [None]: AAAAAAAAAAAAAAA
+AWS Secret Access Key [None]: AAAAAAAAAAAAAA
+Default region name [ap-northeast-2]: ap-northeast-2 
+Default output format [None]: 꼭 필요한 사항은 아니니 default 로 넘어가도 무방
+```
 
-- apt-get 패키지 설정
-```bash
-deb https://packagecloud.io/grafana/stable/debian/ stretch main
-```
-- Install
-```bash
-curl https://packagecloud.io/gpg.key | sudo apt-key add -
-apt-get update
-apt-get install grafana
-```
-- 설정
-```bash
-systemctl daemon-reload # 설정 반영
-systemctl start grafana-server
-systemctl status grafana-server
-systemctl enable grafana-server.service # 부팅시 활성화
-```
-- 웹페이지
-    - http://34.220.10.205:3000/login
-    - ID, PW : admin/admin
+## Credentials 확인
+- 입력이 완료되었다면 아래 경로에 파일이 생성
+- %UserProfile%\.aws\credentials (default)
+![Dashboard3](/assets/images/Creden/1.png)
 
-2.[Influxdb Installing](https://docs.influxdata.com/influxdb/v1.7/introduction/installation/)
-- apt-get 패키지 설정
-```bash
-wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
-source /etc/lsb-release
-echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
-```
 - Install
 ```bash
 sudo apt-get update && sudo apt-get install influxdb
