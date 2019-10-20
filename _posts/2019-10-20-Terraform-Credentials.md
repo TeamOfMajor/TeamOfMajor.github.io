@@ -57,8 +57,11 @@ header:
 #      url: "https://github.com"
 
 ---
-# Terraform-Credentials
-> 지난 몇 년간 많은 Monitoring Tool을 사용해 오면서 그중 가장 간결하고, 빠르게 적용 할 수 있는 Monitoring Tool([Influxdb](https://www.influxdata.com/), [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/), [CloudWatch](https://aws.amazon.com/ko/cloudwatch/), [Grafana](https://grafana.com/))을 소개하고 **AWS**와 **On-premise**의 통합 모니터링 사이트 구축 방법을 공유하기 위해서 작성하였습니다.
+# Terraform Credentials
+> Terraform 을 사용하기 위해서는 Cloud Platform 별로 Access Key가 필요합니다.
+**AWS** 를 예로들면 Access Key 및 Secert Key 가 필요하며, 해당 Key는 노출이 되어서는 안됩니다.
+노출될 경우 악의적인 사람들로 인하여 무분별하게 리소스를 생성하여 엄청난 비용이 추가 될 수 있습니다.
+아래 내용은 **Terraform** 사용 시 코드에 Access Key 및 Secert Key 를 직접 쓰지 않고 파일 형태로 사용하는 내용 입니다.
 
 ## Monitoring Tool
 - Influxdb
