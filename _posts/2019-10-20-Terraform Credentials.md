@@ -60,7 +60,7 @@ header:
 ---
 # Terraform Credentials
 > Terraform 경우 provider.tf 에서 인증처리를 하고 있으며, 인증을 받기 위해서는 Key 가 필요합니다. 
-**AWS** 를 예로들면 Access Key 및 Secert Key 가 필요하며, 해당 Key는 노출이 되어서는 안됩니다.
+**AWS** 를 예로들면 Access Key 및 Secret Key 가 필요하며, 해당 Key는 노출이 되어서는 안됩니다.
 노출될 경우 악의적인 사람들로 인하여 무분별하게 리소스를 생성하여 엄청난 비용이 추가 될 수 있습니다.
 아래 내용은 **Terraform** 사용 시 코드에 Access Key 및 Secert Key 를 직접 쓰지 않고 파일 형태로 사용하는 내용 입니다.
 
@@ -68,7 +68,7 @@ header:
 - Windows OS 환경에서 진행
 - AWS CLI 설치 필요
     - OS 별 각각 AWS CLI 설치 방법이 다르며 링크 참조하여 설치 진행
-    - https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html
+    - (https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html)
 
 
 ## Credentials 등록
