@@ -68,7 +68,7 @@ header:
 - Windows OS 환경에서 진행
 - AWS CLI 설치 필요
     - OS 별 각각 AWS CLI 설치 방법이 다르며 링크 참조하여 설치 진행
-    - [CLI Install](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html)
+    - [AWS CLI Install 참조 링크](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html)
 
 
 ## Credentials 등록
