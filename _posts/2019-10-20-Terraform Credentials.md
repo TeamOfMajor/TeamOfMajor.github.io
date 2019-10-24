@@ -24,7 +24,6 @@ categories: # 작성 글 형식 내용에서 맞게 아래 주석에서 최대 2
 #  - BMT # 성능테스트
 tags: 
   - Terraform # 핵심 주요 단어
-  - AWS Credentials
 toc: true
 comments: true
 
