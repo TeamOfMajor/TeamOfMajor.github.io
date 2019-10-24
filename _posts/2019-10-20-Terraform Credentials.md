@@ -86,16 +86,16 @@ Default output format [None]: 꼭 필요한 사항은 아니니 default 로 넘�
 ## Credentials 확인
 - 입력이 완료되었다면 아래 경로에 파일이 생성
 - %UserProfile%\.aws\credentials (default 경로)
+- Config 파일은 Region 및 format 정보 저장
 ![Creden1](/assets/images/Creden/1.png)
 
-- Config 파일은 Region 및 format 정보 저장
 - Credentials 파일은 Access Key 및 Secret Key 정보 저장
 ![Creden2](/assets/images/Creden/2.png)
 
 
 ## Terraform Credentials 사용
 - provider.tf 파일에 인증정보 입력
-- profile 경우 입력을 하지 않으면 default로 저장되며 입맛에 맞게 변경하여 사용
+- profile 경우 입력하지 않으면 default로 저장되며 입맛에 맞게 변경하여 사용
 ```bash
 provider "aws" {
 	shared_credentials_file = "\Users\myunghoon.kim\.aws\Credentials"
