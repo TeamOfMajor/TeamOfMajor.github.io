@@ -112,14 +112,14 @@ analytics:
 # Site Author
 author:
   name             : "Team Of Major"
-  avatar           : "/assets/images/tom-logo.png"
+  avatar           : "/assets/images/tom-logo-2.png"
   bio              : "기술 블로그."
   location         : "South Korea"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:teamofmajor@email.com
+      url: mailto:teamofmajor@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://teamofmajor.github.io"

@@ -11,3 +11,10 @@
     font-family: "Gidole-Regular";
         src: url( '../_assets/fonts/Gidole-Regular.ttf') format( 'truetype');
 }
+
+.photo2 {
+    width: 110px; height: 110px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
