@@ -94,7 +94,7 @@ graph LR
 ```bash
 sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
 ```
-- Install
+- Install (패키지를 인증을 위한 key 등록 & Install)
 ```bash
 curl https://packages.grafana.com/gpg.key | sudo apt-key add -
 sudo apt-get update && sudo apt-get install grafana
