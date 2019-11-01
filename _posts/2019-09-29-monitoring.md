@@ -92,13 +92,12 @@ graph LR
 
 - apt-get 패키지 설정
 ```bash
-deb https://packagecloud.io/grafana/stable/debian/ stretch main
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+curl https://packages.grafana.com/gpg.key | sudo apt-key add -
 ```
 - Install
 ```bash
-curl https://packagecloud.io/gpg.key | sudo apt-key add -
-apt-get update
-apt-get install grafana
+sudo apt-get update && sudo apt-get install grafana
 ```
 - 설정
 ```bash
@@ -114,7 +113,7 @@ systemctl enable grafana-server.service # 부팅시 활성화
 2.[Influxdb Installing](https://docs.influxdata.com/influxdb/v1.7/introduction/installation/)
 - apt-get 패키지 설정
 ```bash
-wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
+curl https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 source /etc/lsb-release
 echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
 ```
