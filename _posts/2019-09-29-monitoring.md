@@ -93,10 +93,10 @@ graph LR
 - apt-get 패키지 설정
 ```bash
 sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
-```
-- Install (패키지를 인증을 위한 key 등록 & Install)
-```bash
 curl https://packages.grafana.com/gpg.key | sudo apt-key add -
+```
+- Install
+```bash
 sudo apt-get update && sudo apt-get install grafana
 ```
 - 설정
