@@ -61,24 +61,41 @@ header:
 구글에서 설계 되었고 애플리케이션을 구성하는 **컨테이너들의 쉬운 관리를 위해 논리적인 단위로 그룹화** 합니다.
 Kubernetes 어원은 그리스어로 조타수, 키잡이라는 뜻이며 Kubernetes 에서 ubernete가 8글자이므로 k8s라고 표현하기도 합니다.
 
-## Monitoring Tool
-- Influxdb
-    - Go 언어로 작성되어 외부 의존성이 없습니다.
-    - 다양한 API, HTTP(S)를 제공한다.
-    - 시계열 데이터베이스로 시간 순서에 따라 저장하고 조회하는 기능으로 인해 실시간 비교가 필요한 모니터링에 적합합니다.
-- Telegraf
-    - Go 언어로 작성되어 외부 의존성이 없습니다. (Influxdb와 동일한 업체에서 개발)
-    - 다양한 매트릭을 수집하여 데이터베이스로 보내는 에이전트입니다.
-    - 다양한 메트릭을 수집하기 위해 수많은 In-Out Put 플러그인을 제공합니다.
-- CloudWatch
-    - AWS에서 운영되고 있는 서비스를 모니터링을 할 수 있게 해주는 서비스입니다.
-    - 별도의 CloudWatch Agent를 다운받아서 On-premise에서 운영이 가능합니다.
-    - 별도 다운받아 사용 할 수 있듯 커스텀 매트릭 설정이 가능합니다.
-- Grafana
-    - 수집된 매트릭에 대한 자료를 한눈에 볼 수 있도록 시각화를 지원합니다.
-    - 수많은 대시보드 템플릿 및 데이터 소스(Influxdb, CloudWatch, ETC.)를 지원합니다.
+## 출시배경
+- 마이크로 서비스 아키텍처 발전
+    - 마이크로 서비스 아키텍처가 단순 개념에서 부터 점점 발전하기 시작
+    - 디자인 패턴과 이를 구현하기 위한 다양한 인프라 플랫폼들이 소개되기 시작
+    - 서비스가 점점 작아지면서 1~2 Core 로도 운영할 수 있는 MicroService 들이 등장하게 되고 이런 작은 서비스는 VM 환경으로 운영하기에는 낭비가 심합니다.
+- DevOps Models 성숙화
+    - 데브옵스 모델도 나온지는 오래 되었지만 운영을 데브옵스라는 이름으로 바꾼 것일 뿐 실질적인 변화가 없는 팀들이 많습니다.
+    - 데브옵스라는 이름아래서 개발팀이 개발/운영 역할을 병행해서 하는 사례가 오히려 많았습니다.
+    - 이런 데브옵스의 개념도 근래에 들어 정리가 되어가고 있습니다.
+    - 데브옵스 팀은 개발팀이 이를 쉽게 할 수 있는 아랫단의 플랫폼과 자동화를 하는데 목표를 두는 역할로 명확해지고 있습니다.
+- Kubernetes 점유율
+![Kuber](/assets/images/Kubernetes/1.png)    
 
-## Monitoring Flowchart
+## 사용하는이유
+- 벤더나 플랫폼에 종속되지 않습니다.
+    - 대부분 Public Cloud 등에 사용이 가능
+    - 오픈스택과 같은 Private Cloud 구축 환경 또는 BareMetal에도 배포가 가능합니다.
+    - 서비스가 점점 작아지면서 1~2 Core 로도 운영할 수 있는 MicroService 들이 등장하게 되고 이런 작은 서비스는 VM 환경으로 운영하기에는 낭비가 심합니다.
+- Docker 이외에도 rkt나 Hyper Container 등 다양한 컨테이너 엔진들을 지원합니다.
+- 하드웨어 자원을 컨테이너화 하여 Isolation(격리) 하는 기능이 가능합니다.
+- 스토리지 자원의 활용 용이성
+- 노드 Scale 등을 유연하게 지원합니다.
+- 자원을 최대한, 최적으로 사용하기 위해 적절한 위치에 배포가 가능합니다.
+
+## Objects
+- Cluster
+    - 클러스터를 실행하면 컨테이너화된 애플리케이션을 배치할 수 있으며, Master, Node를 아우르는 개념이라고 생각하면 됩니다. 
+    - 클러스터에는 최소한 3개의 Node를 가지고 있어야 하고 Node가 3개 이하로 운영 되어도 Kubernetes 시스템 자체의 문제는 발생하지 않지만 컨테이너 롤링 업데이트 시 애플리케이션의 Downtime이 발생하기 때문에 최소 3개의 Node를 권장합니다.
+- Docker 이외에도 rkt나 Hyper Container 등 다양한 컨테이너 엔진들을 지원합니다.
+- 하드웨어 자원을 컨테이너화 하여 Isolation(격리) 하는 기능이 가능합니다.
+- 스토리지 자원의 활용 용이성
+- 노드 Scale 등을 유연하게 지원합니다.
+- 자원을 최대한, 최적으로 사용하기 위해 적절한 위치에 배포가 가능합니다.
+
+## 사용하는 이유
 <script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
 <div class="mermaid">
 graph LR
@@ -89,7 +106,7 @@ graph LR
     Influxdb. --> Grafana.
 </div>
 
-## Monitoring Installation (OS: Ubuntu18.04)
+## Objects
 1.[Grafana Installing](https://grafana.com/docs/installation/debian/)
 
 - apt-get 패키지 설정
@@ -188,7 +205,7 @@ systemctl enable telegraf
     - Filter policies: 1번에서 생성한 Policy Name 등록
     - Create User: Download.csv (credentials.csv)
 
-## Monitoring Setup
+## Controller
 **[Grafana Datasources Setup](https://grafana.com/docs/features/datasources/) & Monitoring Agent(Telegraf)**
 
 > **Influxdb Config Setup** (/etc/influxdb/influxdb.conf)
