@@ -6,7 +6,7 @@
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
       {% if post.lastmod == null %}
-        <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
+        <lastmod>{{ post.last_modified_at | date: '%Y-%m-%d' }}</lastmod>
       {% else %}
         <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
       {% endif %}
