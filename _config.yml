@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Team Of Major"
 description              : "기술 블로그"
-url                      : "https://teamofmajor.github.io"
+url                      : "https://teamofmajor.com"
 baseurl                  : ""
 repository               : "teamofmajor/teamofmajor.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
