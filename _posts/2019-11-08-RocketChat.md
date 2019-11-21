@@ -70,9 +70,13 @@ header:
 
 
 ## 구성환경
+- Cloud: Azure (Azure AD 사용하기 위해 선택)
 - OS: ubuntu 16.04
 - Container: Docker
-- SSL Certificate
+- SSL Certificate: 사용 (사용권장)
+- DNS: Route 53
+- WEB: nginx
+- DB: mongo
 - LDAP: Azure Active Directory Domain Service (Active Directory 상관없음)
 
 ## 사용하는 이유
@@ -86,17 +90,20 @@ graph LR
     Influxdb. --> Grafana.
 </div>
 
-## Objects
-1.[Grafana Installing](https://grafana.com/docs/installation/debian/)
+## Rocket Chat Install 
+1.[Docker](https://docs.docker.com/get-started/)
 
-- apt-get 패키지 설정
+- Docker 다운로드 및 설치
 ```bash
-sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
-curl https://packages.grafana.com/gpg.key | sudo apt-key add -
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-Linux-x86_64" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+sudo -i docker-compose --version
 ```
-- Install
+- hosts 추가
 ```bash
-sudo apt-get update && sudo apt-get install grafana
+vi /etc/hosts
+127.0.0.1    localhost.localdomain    localhost
+127.0.0.1    azuretest.hooniworld.io  azuretest
 ```
 - 설정
 ```bash
