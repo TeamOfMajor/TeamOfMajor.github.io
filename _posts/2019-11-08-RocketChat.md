@@ -61,39 +61,19 @@ header:
 실시간 채팅을 할 수 있고, 음성과 화상채팅도 가능합니다. 
 다양한 서버 OS를 지원하고 있으며, Client 프로그램으로는 PC(Windows,macOS,Linux) 와 Mobile App(iOS,Android) 을 지원하고 있습니다.
 
-## 출시배경
-- 마이크로 서비스 아키텍처 발전
-    - 마이크로 서비스 아키텍처가 단순 개념에서 부터 점점 발전하기 시작
-    - 디자인 패턴과 이를 구현하기 위한 다양한 인프라 플랫폼들이 소개되기 시작
-    - 서비스가 점점 작아지면서 1~2 Core 로도 운영할 수 있는 MicroService 들이 등장하게 되고 이런 작은 서비스는 VM 환경으로 운영하기에는 낭비가 심합니다.
-- DevOps Models 성숙화
-    - 데브옵스 모델도 나온지는 오래 되었지만 운영을 데브옵스라는 이름으로 바꾼 것일 뿐 실질적인 변화가 없는 팀들이 많습니다.
-    - 데브옵스라는 이름아래서 개발팀이 개발/운영 역할을 병행해서 하는 사례가 오히려 많았습니다.
-    - 이런 데브옵스의 개념도 근래에 들어 정리가 되어가고 있습니다.
-    - 데브옵스 팀은 개발팀이 이를 쉽게 할 수 있는 아랫단의 플랫폼과 자동화를 하는데 목표를 두는 역할로 명확해지고 있습니다.
-- Kubernetes 점유율
-![Kuber](/assets/images/Kubernetes/1.png)    
 
-## 사용하는이유
-- 벤더나 플랫폼에 종속되지 않습니다.
-    - 대부분 Public Cloud 등에 사용이 가능
-    - 오픈스택과 같은 Private Cloud 구축 환경 또는 BareMetal에도 배포가 가능합니다.
-    - 서비스가 점점 작아지면서 1~2 Core 로도 운영할 수 있는 MicroService 들이 등장하게 되고 이런 작은 서비스는 VM 환경으로 운영하기에는 낭비가 심합니다.
-- Docker 이외에도 rkt나 Hyper Container 등 다양한 컨테이너 엔진들을 지원합니다.
-- 하드웨어 자원을 컨테이너화 하여 Isolation(격리) 하는 기능이 가능합니다.
-- 스토리지 자원의 활용 용이성
-- 노드 Scale 등을 유연하게 지원합니다.
-- 자원을 최대한, 최적으로 사용하기 위해 적절한 위치에 배포가 가능합니다.
+## 장점
+- Open Source 기반이라 무료로 사용이 가능
+- Custom 개발을 통하여 기능 향상 가능
+- Container 지원
+- 계정연동 프로토콜 지원 LDAP , oAuth 등
 
-## Objects
-- Cluster
-    - 클러스터를 실행하면 컨테이너화된 애플리케이션을 배치할 수 있으며, Master, Node를 아우르는 개념이라고 생각하면 됩니다. 
-    - 클러스터에는 최소한 3개의 Node를 가지고 있어야 하고 Node가 3개 이하로 운영 되어도 Kubernetes 시스템 자체의 문제는 발생하지 않지만 컨테이너 롤링 업데이트 시 애플리케이션의 Downtime이 발생하기 때문에 최소 3개의 Node를 권장합니다.
-- Docker 이외에도 rkt나 Hyper Container 등 다양한 컨테이너 엔진들을 지원합니다.
-- 하드웨어 자원을 컨테이너화 하여 Isolation(격리) 하는 기능이 가능합니다.
-- 스토리지 자원의 활용 용이성
-- 노드 Scale 등을 유연하게 지원합니다.
-- 자원을 최대한, 최적으로 사용하기 위해 적절한 위치에 배포가 가능합니다.
+
+## 구성환경
+- OS: ubuntu 16.04
+- Container: Docker
+- SSL Certificate
+- LDAP: Azure Active Directory Domain Service (Active Directory 상관없음)
 
 ## 사용하는 이유
 <script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
