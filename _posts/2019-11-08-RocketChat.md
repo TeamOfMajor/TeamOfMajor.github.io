@@ -190,13 +190,11 @@ $ cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" 
 - /etc/nginx/sites-available/default
 ```
 $ vi /etc/nginx/sites-available/default
-## HTTPS Server
+##HTTPS Server
     server {
         listen 443 ssl;
         server_name azuretest.hooniworld.io;
-
         error_log /var/log/nginx/rocketchat_error.log;
-
         ssl_certificate /etc/nginx/unified.pem;
         ssl_certificate_key /etc/nginx/certificate.key;
         #ssl_dhparam /etc/nginx/dhparams.pem;
@@ -220,7 +218,7 @@ $ vi /etc/nginx/sites-available/default
         }
     }
 
-## HTTP Server
+##HTTP Server
     server {
         listen 80;
         server_name azuretest.hooniworld.io;
