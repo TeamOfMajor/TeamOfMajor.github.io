@@ -232,7 +232,6 @@ $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
 - rocketchat yaml (/var/www/rocket.chat/docker-compose.yml)  
-
 ```yaml
 version: '2'
 
@@ -290,9 +289,6 @@ services:
     ports:
       - 3001:8080
 ```
-
-
-
 
 
 
