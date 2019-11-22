@@ -232,7 +232,7 @@ $ mkdir -p /var/www/rocket.chat/data/runtime/db
 $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
-- rocketchat yaml (/var/www/rocket.chat/docker-compose.yml)
+- rocketchat with mongo yaml 작성 (/var/www/rocket.chat/docker-compose.yml)
 ```yaml
 version: '2'
 services:
@@ -289,7 +289,94 @@ services:
     ports:
       - 3001:8080
 ```
-  
+
+- rocketchat with mongo yaml 적용
+```bash
+root@test-chat-imsi1:/var/www/rocket.chat# docker-compose up -d
+Creating network "rocketchat_default" with the default driver
+Pulling mongo (mongo:4.0)...
+4.0: Pulling from library/mongo
+e80174c8b43b: Pull complete
+d1072db285cc: Pull complete
+858453671e67: Pull complete
+3d07b1124f98: Pull complete
+f33f2bb382a3: Pull complete
+a31554bacff2: Pull complete
+b857511882d4: Pull complete
+6f9d66361c2a: Pull complete
+어쩌고~
+저쩌고~
+Digest: sha256:6889b14ae74e1d880a1db5d8209e9afb4afcbbd6af238a3a11884ecb8ed106d0
+Status: Downloaded newer image for rocketchat/hubot-rocketchat:latest
+Creating rocketchat_mongo_1 ... done
+Creating rocketchat_mongo-init-replica_1 ... done
+Creating rocketchat_rocketchat_1         ... done
+Creating rocketchat_hubot_1              ... done
+```
+
+- mongoDB 설정
+```bash
+$ vi /etc/init/rocketchat_mongo.conf
+escription "MongoDB service manager for rocketchat"
+
+# Start MongoDB after docker is running
+start on (started docker)
+stop on runlevel [!2345]
+
+# Automatically Respawn with finite limits
+respawn
+respawn limit 99 5
+
+# Path to our app
+chdir /var/www/rocket.chat
+
+script
+    # Showtime
+    exec /usr/local/bin/docker-compose up mongo
+end script
+```
+
+- rocketchat 설정
+```bash
+$ vi /etc/init/rocketchat_app.conf
+
+description "Rocketchat service manager"
+
+# Start Rocketchat only after mongo job is running
+start on (started rocketchat_mongo)
+stop on runlevel [!2345]
+
+# Automatically Respawn with finite limits
+respawn
+respawn limit 99 5
+
+# Path to our app
+chdir /var/www/rocket.chat
+
+script
+    # Bring up rocketchat app and hubot
+    exec /usr/local/bin/docker-compose up rocketchat hubot
+end script
+```
+
+- Docker 컨테이너 확인 및 시스템 검사 진행
+    - Rocket Chat, MongoDB, Hubot 컨테이너가 작동 중으로 확인
+    - 혹 다운로드가 아직 진행 중일 수 있으니 기다림 필요
+```bash
+$ sudo docker ps -a
+sudo: unable to resolve host test-chat-imsi1
+CONTAINER ID        IMAGE                                COMMAND                  CREATED             STATUS                      PORTS                    NAMES
+1ff17cd6a120        rocketchat/hubot-rocketchat:latest   "/bin/sh -c 'node ..."   10 minutes ago      Up 2 minutes                0.0.0.0:3001->8080/tcp   rocketchat_hubot_1
+cfb1a4d36bef        mongo                                "docker-entrypoint..."   10 minutes ago      Exited (0) 9 minutes ago                             rocketchat_mongo-init-replica_1
+fc29811672ba        rocket.chat:latest                   "bash -c 'for i in..."   10 minutes ago      Up 2 minutes                0.0.0.0:3000->3000/tcp   rocketchat_rocketchat_1
+82ffee3a4b7b        mongo:4.0                            "docker-entrypoint..."   10 minutes ago      Up 2 minutes                27017/tcp                rocketchat_mongo_1
+d2f32810849d        hello-world                          "/hello"                 14 minutes ago      Exited (0) 14 minutes ago                            angry_poitras
+```
+
+- rocketchat 페이지 접속 확인
+<img src="/assets/images/rc/2.png" width="70%" height="30%">  
+ 
+
 ## Conclusion
 설치 명령어 10줄 정도와 설정 파일 내용을 한두 번 변경하면서 AWS & On-premise 모두를 모니터링할 수 있는 환경의 기초를 마련했습니다. 지금 보여드린 부분은 Grafana, Influxdb, Telegraf, CloudWatch 기능에 극히 일부분 및 모니터링 구성에서 보안 요구 사항이 전혀 반영되지 않은 설정이지만 위와 같이 최대한 간결하게라도 구성을 경험하는데 취지를 두고 작성하였습니다.:smiley:
 <br>
