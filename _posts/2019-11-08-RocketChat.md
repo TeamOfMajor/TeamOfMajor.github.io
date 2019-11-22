@@ -224,7 +224,7 @@ $ nginx -t
 $ nginx -s reload
 ```
 
-3.RocketChat
+3.RocketChat with mongoDB
 
 - 디렉토리 생성
 ```bash
@@ -235,7 +235,6 @@ $ mkdir -p /var/www/rocket.chat/data/dump
 - rocketchat yaml (/var/www/rocket.chat/docker-compose.yml)
 ```yaml
 version: '2'
-
 services:
   rocketchat:
     image: rocket.chat:latest
