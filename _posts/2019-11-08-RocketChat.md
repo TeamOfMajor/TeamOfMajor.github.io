@@ -232,14 +232,13 @@ $ mkdir -p /var/www/rocket.chat/data/runtime/db
 $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
-- rocketchat yml 설정  
+- rocketchat yml 설정
 ```yaml
 version: '2'
 
 services:
   rocketchat:
     image: rocket.chat:latest
-    command: bash -c 'for i in `seq 1 30`; do node main.js && s=$$? && break || s=$$?; echo "Tried $$i times. Waiting 5 secs..."; sleep 5; done; (exit $$s)'
     restart: unless-stopped
     volumes:
       - ./uploads:/app/uploads
