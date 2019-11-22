@@ -188,8 +188,8 @@ $ cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" 
 
 - nginx.conf
 - /etc/nginx/sites-available/default
-
 ```
+$ vi /etc/nginx/sites-available/default
 ## HTTPS Server
     server {
         listen 443 ssl;
@@ -250,7 +250,6 @@ $ mkdir -p /var/www/rocket.chat/data/dump
     - ROCKETCHAT_USER, ROCKETCHAT_PASSWORD 및 BOT_NAME을 수정.
     - Rocket.Chat 도커 인스턴스가 프록시 뒤에있는 경우 추가 환경 변수 "Accounts_UseDNSDomainCheck"를 "false"로 설정 (완전히 새로운 배포 인 경우에만 작동 함).
     - /var/www/rocket.chat/docker-compose.yml
-
 ```yaml
 version: '2'
 
