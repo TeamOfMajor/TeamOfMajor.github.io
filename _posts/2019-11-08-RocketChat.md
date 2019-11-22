@@ -233,7 +233,6 @@ $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
 - rocketchat yml 설정  
-
 ```yaml
 version: '2'
 
@@ -244,52 +243,6 @@ services:
     restart: unless-stopped
     volumes:
       - ./uploads:/app/uploads
-    environment:
-      - PORT=3000
-      - ROOT_URL=http://azuretest.hooniworld.io
-      - MONGO_URL=mongodb://mongo:27017/rocketchat
-      - MONGO_OPLOG_URL=mongodb://mongo:27017/local
-      - Accounts_UseDNSDomainCheck=ture
-    depends_on:
-      - mongo
-    ports:
-      - 3000:3000
-
-  mongo:
-    image: mongo:4.0
-    restart: unless-stopped
-    volumes:
-     - ./data/db:/data/db
-     - ./data/dump:/dump
-    command: mongod --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1
-
-  # this container's job is just run the command to initialize the replica set.
-  # it will run the command and remove himself (it will not stay running)
-  mongo-init-replica:
-    image: mongo
-    command: 'bash -c "for i in `seq 1 30`; do mongo mongo/rocketchat --eval \"rs.initiate({ _id: ''rs0'', members: [ { _id: 0, host: ''localhost:27017'' } ]})\" && s=$$? && break || s=$$?; echo \"Tried $$i times. Waiting 5 secs...\"; sleep 5; done; (exit $$s)"'
-    depends_on:
-      - mongo
-
-  # hubot, the popular chatbot (add the bot user first and change the password before starting this image)
-  hubot:
-    image: rocketchat/hubot-rocketchat:latest
-    restart: unless-stopped
-    environment:
-      - ROCKETCHAT_URL=52.141.37.59:3000
-      - ROCKETCHAT_ROOM=GENERAL
-      - ROCKETCHAT_USER=test
-      - ROCKETCHAT_PASSWORD=testpassword
-      - BOT_NAME=test
-  # you can add more scripts as you'd like here, they need to be installable by npm
-      - EXTERNAL_SCRIPTS=hubot-help,hubot-seen,hubot-links,hubot-diagnostics
-    depends_on:
-      - rocketchat
-    volumes:
-      - ./scripts:/home/hubot/scripts
-  # this is used to expose the hubot port for notifications on the host on port 3001, e.g. for hubot-jenkins-notifier
-    ports:
-      - 3001:8080
 ```
 
 ## Conclusion
