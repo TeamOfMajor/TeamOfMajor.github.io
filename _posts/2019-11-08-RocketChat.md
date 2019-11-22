@@ -314,9 +314,8 @@ Creating rocketchat_rocketchat_1         ... done
 Creating rocketchat_hubot_1              ... done
 ```
 
-- mongoDB 설정
+- mongoDB 설정 (/etc/init/rocketchat_mongo.conf)
 ```bash
-$ vi /etc/init/rocketchat_mongo.conf
 escription "MongoDB service manager for rocketchat"
 
 # Start MongoDB after docker is running
@@ -336,10 +335,8 @@ script
 end script
 ```
 
-- rocketchat 설정
+- rocketchat 설정 (/etc/init/rocketchat_app.conf)
 ```bash
-$ vi /etc/init/rocketchat_app.conf
-
 description "Rocketchat service manager"
 
 # Start Rocketchat only after mongo job is running
@@ -362,7 +359,6 @@ end script
 - Docker 컨테이너 확인 및 시스템 검사 진행
     - Rocket Chat, MongoDB, Hubot 컨테이너가 작동 중으로 확인
     - 혹 다운로드가 아직 진행 중일 수 있으니 기다림 필요
-
 ```bash
 $ sudo docker ps -a
 sudo: unable to resolve host test-chat-imsi1
