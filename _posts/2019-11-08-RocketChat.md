@@ -188,8 +188,9 @@ $ cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" 
 
 - nginx.conf
 - /etc/nginx/sites-available/default
-```nginx
-## HTTPS Server ##
+
+```
+## HTTPS Server
     server {
         listen 443 ssl;
         server_name azuretest.hooniworld.io;
@@ -219,7 +220,7 @@ $ cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" 
         }
     }
 
-## HTTP Server ##
+## HTTP Server
     server {
         listen 80;
         server_name azuretest.hooniworld.io;
