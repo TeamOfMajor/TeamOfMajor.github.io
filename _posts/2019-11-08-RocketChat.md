@@ -232,8 +232,8 @@ $ mkdir -p /var/www/rocket.chat/data/runtime/db
 $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
-- rocketchat yml 설정
-```yaml
+- rocketchat 설정
+```bash
 version: '2'
 
 services:
