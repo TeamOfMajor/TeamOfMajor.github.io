@@ -232,8 +232,7 @@ $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
 - rocketchat yaml (/var/www/rocket.chat/docker-compose.yml)  
-
-
+<br>
 ```yaml
 version: '2'
 
@@ -291,13 +290,6 @@ services:
     ports:
       - 3001:8080
 ```
-
-
-
-
-
-
-
 
 - 웹페이지
     - http://34.220.10.205:3000/login
