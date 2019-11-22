@@ -100,7 +100,7 @@ $ chmod +x /usr/local/bin/docker-compose
 $ sudo -i docker-compose --version
 ```
 
-- 패키지 정보 업데이트 및 CA certificates 설치
+- 패키지 정보 업데이트 및 CA certificates 설치  
 APT가 https로 동작할 수 있도록 설치
 ```bash
 $ sudo apt-get update
@@ -172,7 +172,7 @@ www-data   3844   3841  0 00:09 ?        00:00:00 nginx: worker process
 ```
 
 - nginx 인증서 통합  
-<u>※ 통합된 unified.pem 파일을 편집기로 열어 PEM 내용간 구분되어 있는지 확인</u>
+<u>※ 통합된 unified.pem 파일 편집기로 열어 PEM 내용간 구분되어 있는지 확인</u>
 ```bash
 $ cat cert.pem > unified.pem 
 $ cat chain.pem >> unified.pem 
@@ -233,8 +233,8 @@ $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
 - rocketchat yml 설정
-```yaml
 
+```yaml
 version: '2'
 
 services:
