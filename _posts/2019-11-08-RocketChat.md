@@ -116,7 +116,6 @@ sudo apt-get install apt-transport-https ca-certificates
 - GPG key 추가
 ```bash
 apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-
 vi /etc/apt/sources.list/docker.list (해당 파일이 없으면 생성)
 deb https://apt.dockerproject.org/repo ubuntu-xenial main (내용 입력 후 저장)
 ```
