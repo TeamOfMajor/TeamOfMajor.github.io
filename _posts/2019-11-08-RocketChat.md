@@ -81,7 +81,7 @@ header:
 
 ## Architecture
 <!-- ![rc_architecture](/assets/images/rc/1.png) -->
-<img src="/assets/images/rc/1.png" width="90%" height="30%">  
+<img src="/assets/images/rc/1.png" width="70%" height="30%">  
 
 ## Rocket Chat Install 
 1.[Docker](https://docs.docker.com/get-started/)
@@ -231,7 +231,7 @@ $ mkdir -p /var/www/rocket.chat/data/runtime/db
 $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
-- 디렉토리 생성
+- rocketchat yml 설정
 ```bash
 $ mkdir -p /var/www/rocket.chat/data/runtime/db
 $ mkdir -p /var/www/rocket.chat/data/dump
