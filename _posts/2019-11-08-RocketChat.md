@@ -177,7 +177,7 @@ root       3841      1  0 00:09 ?        00:00:00 nginx: master process /usr/sbi
 www-data   3844   3841  0 00:09 ?        00:00:00 nginx: worker process
 ```
 
-- nginx 인증서 통합 
+- nginx 인증서 통합  
 **통합된 unified.pem 파일을 Text 편집기로 열어서, PEM 내용간 구분되어 있는지 꼭 확인**
 ```bash
 $ cat cert.pem > unified.pem 
@@ -234,7 +234,7 @@ $ nginx -t
 $ nginx -s reload
 ```
 
-3.[RocketChat]
+3.RocketChat
 
 - 디렉토리 생성
 ```bash
@@ -248,9 +248,8 @@ $ mkdir -p /var/www/rocket.chat/data/dump
     - 포트 (3000)를 동일하게 유지.
     - ROCKETCHAT_USER, ROCKETCHAT_PASSWORD 및 BOT_NAME을 수정.
     - Rocket.Chat 도커 인스턴스가 프록시 뒤에있는 경우 추가 환경 변수 "Accounts_UseDNSDomainCheck"를 "false"로 설정 (완전히 새로운 배포 인 경우에만 작동 함).
-
 ```bash
-vi /var/www/rocket.chat/docker-compose.yml
+$ vi /var/www/rocket.chat/docker-compose.yml
 version: '2'
 
 services:
