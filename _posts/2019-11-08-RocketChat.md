@@ -95,101 +95,99 @@ graph LR
 
 - hosts 추가
 ```bash
-vi /etc/hosts
+$ vi /etc/hosts
 127.0.0.1    localhost.localdomain    localhost
 127.0.0.1    azuretest.hooniworld.io  azuretest
 ```
 
 - Docker-compose 다운로드 및 설치
 ```bash
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-Linux-x86_64" -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
-sudo -i docker-compose --version
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-Linux-x86_64" -o /usr/local/bin/docker-compose
+$ chmod +x /usr/local/bin/docker-compose
+$ sudo -i docker-compose --version
 ```
 
 - 패키지 정보 업데이트 및 CA certificates 설치, APT가 https로 동작할 수 있도록 설치
 ```bash
-sudo apt-get update
-sudo apt-get install apt-transport-https ca-certificates
+$ sudo apt-get update
+$ sudo apt-get install apt-transport-https ca-certificates
 ```
 
 - GPG key 추가
 ```bash
-apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-vi /etc/apt/sources.list/docker.list (해당 파일이 없으면 생성)
+$ apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+$ vi /etc/apt/sources.list/docker.list (해당 파일이 없으면 생성)
 deb https://apt.dockerproject.org/repo ubuntu-xenial main (내용 입력 후 저장)
 ```
 
 - APT package index 업데이트
 ```bash
-sudo apt-get update
+$ sudo apt-get update
 ```
 
 - 오래된 저장소를 삭제
 ```bash
-sudo apt-get purge lxc-docker
+$ sudo apt-get purge lxc-docker
 ```
 
 - 올바른 저장소에서 받은 지 검증
 ```bash
-apt-cache policy docker-engine
+$ apt-cache policy docker-engine
 ```
 
 - linux-image-extra 패키지를 설치
 ```bash
-sudo apt-get install linux-image-extra-$(uname -r)
-sudo apt-get update
+$ sudo apt-get install linux-image-extra-$(uname -r)
+$ sudo apt-get update
 ```
 
 - Docker engine 설치
 ```bash
-sudo apt-get install docker-engine
+$ sudo apt-get install docker-engine
 ```
 
 - docker가 정상적으로 설치되었는지 확인
 ```bash
-oot@test-chat-imsi1:/etc/apt/sources.list.d# sudo docker run hello-world
+$ /etc/apt/sources.list.d# sudo docker run hello-world
 sudo: unable to resolve host test-chat-imsi1
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
 1b930d010525: Pull complete 
 Digest: sha256:c3b4ada4687bbaa170745b3e4dd8ac3f194ca95b2d0518b417fb47e5879d9b5f
 Status: Downloaded newer image for hello-world:latest
-
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ```
 
 - Docker 서비스 시작 및 자동 시작 설정 
 ```bash
-sudo service docker start
-systemctl enable docker
+$ sudo service docker start
+$ systemctl enable docker
 ```
 
 2.[Nginx]
 
 - nginx 설치 
 ```bash
-apt-get -y install nginx
-service nginx start
-systemctl enable nginx
-
-ps -ef | grep nginx
+$ apt-get -y install nginx
+$ service nginx start
+$ systemctl enable nginx
+$ ps -ef | grep nginx
 root       3841      1  0 00:09 ?        00:00:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
 www-data   3844   3841  0 00:09 ?        00:00:00 nginx: worker process
 ```
 
 - nginx 인증서 통합 (통합된 unified.pem 파일을 Text 편집기로 열어서, PEM 내용간 구분되어 있는지 꼭 확인)
 ```bash
-cat cert.pem > unified.pem 
-cat chain.pem >> unified.pem 
+$ cat cert.pem > unified.pem 
+$ cat chain.pem >> unified.pem 
 또는
-cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" > unified.pem
+$ cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" > unified.pem
 ```
 
 - nginx.conf 설정
 ```bash
-vi /etc/nginx/sites-available/default
+$ vi /etc/nginx/sites-available/default
 
 # HTTPS Server
     server {
@@ -230,18 +228,18 @@ vi /etc/nginx/sites-available/default
 ```
 
 - nginx 설정 확인 및 재시작
-    - restart 명령어는 프로세스를 재 기동시키기 때문에 이미 들어온 요청들은 에러가 발생하지만 reload 명령어는 이미 들어온 요청들을 다 처리한 후에 새로운 프로세스를 생성하여 새로운 설정을 반영하게 됩니다.
+※ restart 명령어는 프로세스를 재 기동시키기 때문에 이미 들어온 요청들은 에러가 발생하지만 reload 명령어는 이미 들어온 요청들을 다 처리한 후에 새로운 프로세스를 생성하여 새로운 설정을 반영하게 됩니다.
 ```bash
-nginx -t
-nginx -s reload
+$ nginx -t
+$ nginx -s reload
 ```
 
 3.[RocketChat]
 
 - 디렉토리 생성
 ```bash
-mkdir -p /var/www/rocket.chat/data/runtime/db
-mkdir -p /var/www/rocket.chat/data/dump
+$ mkdir -p /var/www/rocket.chat/data/runtime/db
+$ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
 - rocketchat yaml 설정
