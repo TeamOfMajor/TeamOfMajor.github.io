@@ -178,11 +178,10 @@ $ cat chain.pem >> unified.pem
 $ cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" > unified.pem
 ```
 
-- nginx.conf
+- nginx.conf 설정
 - /etc/nginx/sites-available/default  
 ```nginx
-$ vi /etc/nginx/sites-available/default
-##HTTPS Server
+># HTTPS Server
     server {
         listen 443 ssl;
         server_name azuretest.hooniworld.io;
@@ -209,8 +208,7 @@ $ vi /etc/nginx/sites-available/default
             proxy_redirect off;
         }
     }
-
-##HTTP Server
+># HTTP Server
     server {
         listen 80;
         server_name azuretest.hooniworld.io;
