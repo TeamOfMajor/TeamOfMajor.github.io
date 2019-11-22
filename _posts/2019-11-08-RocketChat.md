@@ -178,7 +178,7 @@ www-data   3844   3841  0 00:09 ?        00:00:00 nginx: worker process
 ```
 
 - nginx 인증서 통합  
-**통합된 unified.pem 파일을 Text 편집기로 열어서, PEM 내용간 구분되어 있는지 꼭 확인**
+<u>통합된 unified.pem 파일을 Text 편집기로 열어서, PEM 내용간 구분되어 있는지 꼭 확인</u>
 ```bash
 $ cat cert.pem > unified.pem 
 $ cat chain.pem >> unified.pem 
@@ -189,7 +189,7 @@ $ cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" 
 - nginx.conf
 - /etc/nginx/sites-available/default
 ```nginx
-# HTTPS Server
+## HTTPS Server ##
     server {
         listen 443 ssl;
         server_name azuretest.hooniworld.io;
@@ -219,7 +219,7 @@ $ cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" 
         }
     }
 
-# HTTP Server
+## HTTP Server ##
     server {
         listen 80;
         server_name azuretest.hooniworld.io;
@@ -228,7 +228,7 @@ $ cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" 
 ```
 
 - nginx 설정 확인 및 재시작  
-**※ restart 명령어는 프로세스를 재 기동시키기 때문에 이미 들어온 요청들은 에러가 발생하지만 reload 명령어는 이미 들어온 요청들을 다 처리한 후에 새로운 프로세스를 생성하여 새로운 설정을 반영하게 됩니다**
+<u>※ restart 명령어는 프로세스를 재 기동시키기 때문에 이미 들어온 요청들은 에러가 발생하지만 reload 명령어는 이미 들어온 요청들을 다 처리한 후에 새로운 프로세스를 생성하여 새로운 설정을 반영하게 됩니다</u>
 ```bash
 $ nginx -t
 $ nginx -s reload
@@ -249,7 +249,7 @@ $ mkdir -p /var/www/rocket.chat/data/dump
     - ROCKETCHAT_USER, ROCKETCHAT_PASSWORD 및 BOT_NAME을 수정.
     - Rocket.Chat 도커 인스턴스가 프록시 뒤에있는 경우 추가 환경 변수 "Accounts_UseDNSDomainCheck"를 "false"로 설정 (완전히 새로운 배포 인 경우에만 작동 함).
     - /var/www/rocket.chat/docker-compose.yml
-    
+
 ```yaml
 version: '2'
 
