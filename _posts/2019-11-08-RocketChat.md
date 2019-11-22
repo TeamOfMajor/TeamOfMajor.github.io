@@ -79,16 +79,8 @@ header:
 - DB: mongo
 - LDAP: Azure Active Directory Domain Service (Active Directory 상관없음)
 
-## 사용하는 이유
-<script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
-<div class="mermaid">
-graph LR
-    AWS --> CloudWatch
-    On-premise --> Telegraf.
-    Telegraf. --> Influxdb.
-    CloudWatch -->|AccessKey| Influxdb.
-    Influxdb. --> Grafana.
-</div>
+## Architecture
+![rc_architecture](/assets/images/rc/1.png)
 
 ## Rocket Chat Install 
 1.[Docker](https://docs.docker.com/get-started/)
@@ -187,8 +179,8 @@ $ cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" 
 ```
 
 - nginx.conf
-- /etc/nginx/sites-available/default
-```
+- /etc/nginx/sites-available/default  
+```nginx
 $ vi /etc/nginx/sites-available/default
 ##HTTPS Server
     server {
@@ -247,7 +239,8 @@ $ mkdir -p /var/www/rocket.chat/data/dump
     - 포트 (3000)를 동일하게 유지.
     - ROCKETCHAT_USER, ROCKETCHAT_PASSWORD 및 BOT_NAME을 수정.
     - Rocket.Chat 도커 인스턴스가 프록시 뒤에있는 경우 추가 환경 변수 "Accounts_UseDNSDomainCheck"를 "false"로 설정 (완전히 새로운 배포 인 경우에만 작동 함).
-    - /var/www/rocket.chat/docker-compose.yml
+    - /var/www/rocket.chat/docker-compose.yml  
+
 ```yaml
 version: '2'
 
