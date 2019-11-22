@@ -81,7 +81,7 @@ header:
 
 ## Architecture
 <!-- ![rc_architecture](/assets/images/rc/1.png) -->
-<img src="/assets/images/rc/1.png" width="90%" height="40%">  
+<img src="/assets/images/rc/1.png" width="90%" height="30%">  
 
 ## Rocket Chat Install 
 1.[Docker](https://docs.docker.com/get-started/)
