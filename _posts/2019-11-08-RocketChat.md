@@ -231,7 +231,8 @@ $ mkdir -p /var/www/rocket.chat/data/runtime/db
 $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
-- rocketchat yaml
+- rocketchat yaml  
+
 ```bash
 version: '2'
 
