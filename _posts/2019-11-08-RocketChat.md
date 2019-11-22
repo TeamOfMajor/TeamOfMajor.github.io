@@ -233,6 +233,11 @@ $ mkdir -p /var/www/rocket.chat/data/dump
 
 - rocketchat yaml (/var/www/rocket.chat/docker-compose.yml)
 
+```bash
+$ mkdir -p /var/www/rocket.chat/data/runtime/db
+$ mkdir -p /var/www/rocket.chat/data/dump
+```
+
 ```yaml
 version: '2'
 
