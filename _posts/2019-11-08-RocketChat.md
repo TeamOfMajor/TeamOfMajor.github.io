@@ -362,6 +362,7 @@ end script
 - Docker 컨테이너 확인 및 시스템 검사 진행
     - Rocket Chat, MongoDB, Hubot 컨테이너가 작동 중으로 확인
     - 혹 다운로드가 아직 진행 중일 수 있으니 기다림 필요
+
 ```bash
 $ sudo docker ps -a
 sudo: unable to resolve host test-chat-imsi1
