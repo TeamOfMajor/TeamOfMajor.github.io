@@ -233,9 +233,8 @@ $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
 - rocketchat 설정
-```bash
+```yaml
 version: '2'
-
 services:
   rocketchat:
     image: rocket.chat:latest
