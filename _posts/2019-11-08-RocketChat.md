@@ -238,6 +238,7 @@ $ mkdir -p /var/www/rocket.chat/data/dump
     - 포트 (3000)를 동일하게 유지
     - ROCKETCHAT_USER, ROCKETCHAT_PASSWORD 및 BOT_NAME을 수정
     - Rocket.Chat 도커 인스턴스가 프록시 뒤에있는 경우 추가 환경 변수 "Accounts_UseDNSDomainCheck"를 "false"로 설정 (완전히 새로운 배포 인 경우에만 작동 함)  
+    
 ```yaml
 version: '2'
 
