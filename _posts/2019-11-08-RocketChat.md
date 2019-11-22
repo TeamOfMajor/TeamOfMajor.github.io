@@ -81,7 +81,7 @@ header:
 
 ## Architecture
 <!-- ![rc_architecture](/assets/images/rc/1.png) -->
-<img src="/assets/images/rc/1.png" width="100%" height="50%">  
+<img src="/assets/images/rc/1.png" width="90%" height="40%">  
 
 ## Rocket Chat Install 
 1.[Docker](https://docs.docker.com/get-started/)
@@ -231,9 +231,9 @@ $ mkdir -p /var/www/rocket.chat/data/runtime/db
 $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
-- rocketchat yaml  
+- rocketchat yaml (/var/www/rocket.chat/docker-compose.yml)  
 
-```bash
+```yaml
 version: '2'
 
 services:
