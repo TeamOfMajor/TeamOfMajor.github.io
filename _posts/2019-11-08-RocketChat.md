@@ -314,11 +314,9 @@ Creating rocketchat_rocketchat_1         ... done
 Creating rocketchat_hubot_1              ... done
 ```
 
-- mongoDB 설정(/etc/init/rocketchat_mongo.conf)
+- mongoDB 설정 (/etc/init/rocketchat_mongo.conf)
 ```bash
-$ vi /etc/init/rocketchat_mongo.conf
 escription "MongoDB service manager for rocketchat"
-
 # Start MongoDB after docker is running
 start on (started docker)
 stop on runlevel [!2345]
