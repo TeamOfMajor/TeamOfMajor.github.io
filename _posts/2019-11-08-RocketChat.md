@@ -314,48 +314,6 @@ Creating rocketchat_rocketchat_1         ... done
 Creating rocketchat_hubot_1              ... done
 ```
 
-- mongoDB 설정 (/etc/init/rocketchat_mongo.conf)
-
-```bash
-escription "MongoDB service manager for rocketchat"
-# Start MongoDB after docker is running
-start on (started docker)
-stop on runlevel [!2345]
-
-# Automatically Respawn with finite limits
-respawn
-respawn limit 99 5
-
-# Path to our app
-chdir /var/www/rocket.chat
-
-script
-    # Showtime
-    exec /usr/local/bin/docker-compose up mongo
-end script
-```
-
-- rocketchat 설정 (/etc/init/rocketchat_app.conf)
-```bash
-$ vi /etc/init/rocketchat_app.conf
-description "Rocketchat service manager"
-
-# Start Rocketchat only after mongo job is running
-start on (started rocketchat_mongo)
-stop on runlevel [!2345]
-
-# Automatically Respawn with finite limits
-respawn
-respawn limit 99 5
-
-# Path to our app
-chdir /var/www/rocket.chat
-
-script
-    # Bring up rocketchat app and hubot
-    exec /usr/local/bin/docker-compose up rocketchat hubot
-end script
-```
 
 - Docker 컨테이너 확인 및 시스템 검사 진행
     - Rocket Chat, MongoDB, Hubot 컨테이너가 작동 중으로 확인
