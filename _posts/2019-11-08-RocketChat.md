@@ -364,7 +364,7 @@ fc29811672ba        rocket.chat:latest                   "bash -c 'for i in..." 
 d2f32810849d        hello-world                          "/hello"                 14 minutes ago      Exited (0) 14 minutes ago                            angry_poitras
 ```
 
-- rocketchat 페이지 접속 확인
+- rocketchat 페이지 접속 확인  
 <img src="/assets/images/rc/2.png" width="70%" height="30%">  
  
 
