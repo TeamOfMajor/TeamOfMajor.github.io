@@ -376,7 +376,7 @@ d2f32810849d        hello-world                          "/hello"               
 
 ## Conclusion
 Azure Cloud Platform 에서 Rocket.Chat 을 구성하였고 
-docker, nginx, mongo DB 까지 경험을 할 수 있습니다. 
+docker, nginx, mongoDB 까지 경험을 할 수 있습니다. 
 <br>
 <br>
 다음 포스팅 내용은 아래의 내용을 정리하여 포스팅 하겠습니다.
