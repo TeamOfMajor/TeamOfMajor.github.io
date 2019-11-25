@@ -232,7 +232,8 @@ $ mkdir -p /var/www/rocket.chat/data/runtime/db
 $ mkdir -p /var/www/rocket.chat/data/dump
 ```
 
-- rocketchat with mongo yaml 작성 (/var/www/rocket.chat/docker-compose.yml)
+- rocketchat with mongo yaml 작성  
+(/var/www/rocket.chat/docker-compose.yml)
 ```yaml
 version: '2'
 services:
@@ -313,7 +314,8 @@ Creating rocketchat_mongo-init-replica_1 ... done
 Creating rocketchat_rocketchat_1         ... done
 Creating rocketchat_hubot_1              ... done
 ```
-- mongoDB 설정 (/etc/init/rocketchat_mongo.conf)
+- mongoDB 설정  
+(/etc/init/rocketchat_mongo.conf)
 ```bash
 escription "MongoDB service manager for rocketchat"
 # Start MongoDB after docker is running
@@ -333,7 +335,8 @@ script
 end script
 ```
 
-- rocketchat 설정 (/etc/init/rocketchat_app.conf)
+- rocketchat 설정  
+(/etc/init/rocketchat_app.conf)
 ```bash
 $ vi /etc/init/rocketchat_app.conf
 description "Rocketchat service manager"
@@ -356,9 +359,8 @@ end script
 ```
 
 - Docker 컨테이너 확인 및 시스템 검사 진행
-    - Rocket Chat, MongoDB, Hubot 컨테이너가 작동 중으로 확인
-    - 혹 다운로드가 아직 진행 중일 수 있으니 기다림 필요
-
+- Rocket Chat, MongoDB, Hubot 컨테이너가 작동 중으로 확인
+- 혹시 다운로드가 아직 진행 중일 수 있으니 기다림 필요
 ```bash
 $ sudo docker ps -a
 sudo: unable to resolve host test-chat-imsi1
