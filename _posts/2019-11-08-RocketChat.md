@@ -72,7 +72,7 @@ header:
 ## 구성환경
 - Cloud: Azure (Azure AD 사용하기 위해 선택)
 - OS: ubuntu 16.04
-- Container: Docker
+- Container: docker
 - SSL Certificate: 사용 (사용권장)
 - DNS: Route 53
 - WEB: nginx
@@ -86,7 +86,7 @@ header:
 <img src="/assets/images/rc/1.png" width="70%" height="30%">  
 
 ## Rocket Chat Install 
-**1.[Docker](https://docs.docker.com/get-started/) 링크를 통하여 내용참고**
+**1.[docker](https://docs.docker.com/get-started/) 링크를 통하여 내용참고**
 
 - hosts 추가
 ```bash
@@ -162,7 +162,6 @@ $ systemctl enable docker
 ```
 
 <br>
-<br>
 
 **2.nginx**
 
@@ -229,7 +228,6 @@ $ nginx -t
 $ nginx -s reload
 ```
 
-<br>
 <br>
 
 **3.RocketChat with mongoDB**
@@ -378,8 +376,8 @@ d2f32810849d        hello-world                          "/hello"               
 
 ## Conclusion
 Azure Cloud Platform 에서 Rocket.Chat 을 구성하였고 
-Docker, nginx, mongo DB 까지 경험을 할 수 있습니다. 
+docker, nginx, mongo DB 까지 경험을 할 수 있습니다. 
 <br>
 <br>
-다음 포스팅 내용은 아래의 내용들을 정리해서 포스팅 하겠습니다.
+다음 포스팅 내용은 아래의 내용을 정리하여 포스팅 하겠습니다.
 - Azure AD Domain Service & LDAP 연동
