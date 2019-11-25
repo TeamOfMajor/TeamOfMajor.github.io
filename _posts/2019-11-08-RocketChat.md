@@ -161,6 +161,9 @@ $ sudo service docker start
 $ systemctl enable docker
 ```
 
+<br>
+<br>
+
 **2.nginx**
 
 - nginx 설치 
@@ -225,6 +228,9 @@ $ cat "서버인증서.pem" "체인인증서(모두).crt" "루트인증서.crt" 
 $ nginx -t
 $ nginx -s reload
 ```
+
+<br>
+<br>
 
 **3.RocketChat with mongoDB**
 
