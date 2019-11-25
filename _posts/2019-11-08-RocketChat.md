@@ -293,7 +293,7 @@ services:
 
 - rocketchat with mongo yaml 적용
 ```bash
-root@test-chat-imsi1:/var/www/rocket.chat# docker-compose up -d
+$ docker-compose up -d
 Creating network "rocketchat_default" with the default driver
 Pulling mongo (mongo:4.0)...
 4.0: Pulling from library/mongo
