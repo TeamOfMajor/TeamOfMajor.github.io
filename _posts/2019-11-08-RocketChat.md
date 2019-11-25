@@ -314,8 +314,7 @@ Creating rocketchat_rocketchat_1         ... done
 Creating rocketchat_hubot_1              ... done
 ```
 
-- mongoDB 설정 (/etc/init/rocketchat_mongo.conf)
-
+- mongoDB 설정(/etc/init/rocketchat_mongo.conf)
 ```bash
 $ vi /etc/init/rocketchat_mongo.conf
 escription "MongoDB service manager for rocketchat"
@@ -338,7 +337,6 @@ end script
 ```
 
 - rocketchat 설정 (/etc/init/rocketchat_app.conf)
-
 ```bash
 $ vi /etc/init/rocketchat_app.conf
 description "Rocketchat service manager"
