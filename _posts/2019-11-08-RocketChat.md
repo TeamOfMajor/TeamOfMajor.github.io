@@ -78,13 +78,15 @@ header:
 - WEB: nginx
 - DB: mongo
 - LDAP: Azure Active Directory Domain Service (Active Directory 상관없음)
+- Port: 22, 443, 3000, 27017
+    - 80 port는 사용하지 않고 HTTP 요청 시 HTTPS Redirect 설정
 
 ## Architecture
 <!-- ![rc_architecture](/assets/images/rc/1.png) -->
 <img src="/assets/images/rc/1.png" width="70%" height="30%">  
 
 ## Rocket Chat Install 
-1.[Docker](https://docs.docker.com/get-started/)
+**1.[Docker](https://docs.docker.com/get-started/) 링크를 통하여 내용참고**
 
 - hosts 추가
 ```bash
@@ -159,7 +161,7 @@ $ sudo service docker start
 $ systemctl enable docker
 ```
 
-2.nginx
+**2.nginx**
 
 - nginx 설치 
 ```bash
@@ -224,7 +226,7 @@ $ nginx -t
 $ nginx -s reload
 ```
 
-3.RocketChat with mongoDB
+**3.RocketChat with mongoDB**
 
 - 디렉토리 생성
 ```bash
@@ -369,7 +371,7 @@ d2f32810849d        hello-world                          "/hello"               
  
 
 ## Conclusion
-Azure 환경에서 Rocket.Chat 을 구성하였고 
+Azure Cloud Platform 에서 Rocket.Chat 을 구성하였고 
 Docker, nginx, mongo DB 까지 경험을 할 수 있습니다. 
 <br>
 <br>
