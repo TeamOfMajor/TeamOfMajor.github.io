@@ -314,22 +314,6 @@ Creating rocketchat_rocketchat_1         ... done
 Creating rocketchat_hubot_1              ... done
 ```
 
-
-- Docker 컨테이너 확인 및 시스템 검사 진행
-    - Rocket Chat, MongoDB, Hubot 컨테이너가 작동 중으로 확인
-    - 혹 다운로드가 아직 진행 중일 수 있으니 기다림 필요
-
-```bash
-$ sudo docker ps -a
-sudo: unable to resolve host test-chat-imsi1
-CONTAINER ID        IMAGE                                COMMAND                  CREATED             STATUS                      PORTS                    NAMES
-1ff17cd6a120        rocketchat/hubot-rocketchat:latest   "/bin/sh -c 'node ..."   10 minutes ago      Up 2 minutes                0.0.0.0:3001->8080/tcp   rocketchat_hubot_1
-cfb1a4d36bef        mongo                                "docker-entrypoint..."   10 minutes ago      Exited (0) 9 minutes ago                             rocketchat_mongo-init-replica_1
-fc29811672ba        rocket.chat:latest                   "bash -c 'for i in..."   10 minutes ago      Up 2 minutes                0.0.0.0:3000->3000/tcp   rocketchat_rocketchat_1
-82ffee3a4b7b        mongo:4.0                            "docker-entrypoint..."   10 minutes ago      Up 2 minutes                27017/tcp                rocketchat_mongo_1
-d2f32810849d        hello-world                          "/hello"                 14 minutes ago      Exited (0) 14 minutes ago                            angry_poitras
-```
-
 - rocketchat 페이지 접속 확인
 <img src="/assets/images/rc/2.png" width="70%" height="30%">  
  
