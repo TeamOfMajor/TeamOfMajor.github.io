@@ -2,7 +2,7 @@
 
 layout: single
 
-title: rocketchat # 제목은 명확하고 간결하게 쓰기
+title: Rocket.chat # 제목은 명확하고 간결하게 쓰기
 excerpt: "블랙위도우" # 작성자 닉네임(마블)
 search: true
 categories: # 작성 글 형식 내용에서 맞게 아래 주석에서 최대 2개 선택
@@ -83,7 +83,7 @@ header:
 
 ## Architecture
 <!-- ![rc_architecture](/assets/images/rc/1.png) -->
-<img src="/assets/images/rc/1.png" width="70%" height="30%">  
+<center><img src="/assets/images/rc/1.png" width="50%" height="30%"></center>  
 
 ## Rocket Chat Install 
 **1.[docker](https://docs.docker.com/get-started/) 링크를 통하여 내용참고**
