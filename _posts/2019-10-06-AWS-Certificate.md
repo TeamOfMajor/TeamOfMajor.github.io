@@ -1,4 +1,7 @@
 ---
+
+layout: posts
+
 title:  AWS 자격증 취득방법 # 주제
 excerpt: "블랙위도우." # 닉네임(마블)
 search: true
@@ -9,6 +12,9 @@ tags:
   - AWS # 핵심 주요 단어
 toc: true
 comments: true
+sitemap :
+changefreq : daily
+priority : 1.0
 
 #last_modified_at: 2019-10-03T00:03:00+09:00
 #last_modified_at: {{ page.last_modified_at | date: '%Y:%B:%A:%d:%S:%R' }}

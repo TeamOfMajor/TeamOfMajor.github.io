@@ -1,6 +1,6 @@
 ---
 
-layout: single
+layout: posts
 
 title: Terraform Credentials # 제목은 명확하고 간결하게 쓰기
 excerpt: "블랙위도우" # 작성자 닉네임(마블)
@@ -26,6 +26,9 @@ tags:
   - Terraform # 핵심 주요 단어
 toc: true
 comments: true
+sitemap :
+changefreq : daily
+priority : 1.0
 
 # Emoji 단축키 (https://gist.github.com/rxaviers/7360908)
 # Maerdown 설명-1 https://gist.github.com/ihoneymon/652be052a0727ad59601
