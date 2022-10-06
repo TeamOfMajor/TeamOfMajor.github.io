@@ -6,8 +6,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.7.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     algolia_html_extractor (2.6.2)
       json (~> 2.0)
       nokogiri (~> 1.10.4)
@@ -148,7 +148,6 @@ GEM
     jekyll-mentions (1.4.1)
       html-pipeline (~> 2.3)
       jekyll (~> 3.0)
-    jekyll-mermaid (1.0.0)
     jekyll-optional-front-matter (0.3.0)
       jekyll (~> 3.0)
     jekyll-paginate (1.1.0)
@@ -289,7 +288,6 @@ DEPENDENCIES
   jekyll-gist
   jekyll-include-cache
   jekyll-last-modified-at
-  jekyll-mermaid
   jekyll-paginate
   jekyll-sitemap
   jemoji
